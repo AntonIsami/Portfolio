@@ -1,0 +1,13 @@
+@import "./partials/normalize";
+@import "./partials/typography";
+
+body, html {
+    font-size: 125%;
+    background-color: #E5E5E5;
+}
+
+.wrapper {
+    width: 85%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
