@@ -3,6 +3,7 @@
 @import "./partials/nav";
 @import "./partials/landing";
 @import "./partials/portfolioSection";
+@import "./partials/about";
 
 body, html {
     font-size: 125%;
@@ -10,7 +11,7 @@ body, html {
 }
 
 .wrapper {
-    width: 85%;
+    width: 82.5%;
     max-width: 1400px;
     margin: 0 auto;
 }

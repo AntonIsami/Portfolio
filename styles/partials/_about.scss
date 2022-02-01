@@ -1,0 +1,19 @@
+h3 {
+    border: 10px solid #001F3D;
+    padding: 25px 25px;
+    width: 400px;
+    margin: 60px auto;
+}
+h4 {
+   margin: 60px auto;
+   text-align: center;
+   padding-right: 10px;
+}
+.techStack {
+    display: flex;
+    flex-wrap: wrap;
+}
+.tech {
+    display: flex;
+    width: 25%;
+}

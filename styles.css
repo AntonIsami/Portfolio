@@ -216,9 +216,14 @@ template {
   overflow: hidden;
 }
 
+a, p, h1, h2, h3, h4, h5, h6, img {
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 40px;
   line-height: 50px;
   color: #0F4A6F;
@@ -231,7 +236,7 @@ h2 {
   font-size: 30px;
   line-height: 38px;
   text-align: center;
-  letter-spacing: 44%;
+  letter-spacing: 17px;
   color: #001F3D;
 }
 
@@ -240,7 +245,7 @@ h3 {
   font-weight: 700;
   font-size: 30px;
   line-height: 38px;
-  letter-spacing: 36%;
+  letter-spacing: 17px;
   text-align: center;
   color: #001F3D;
 }
@@ -250,13 +255,13 @@ h4 {
   font-weight: 700;
   font-size: 30px;
   line-height: 30px;
-  letter-spacing: 18.5%;
+  letter-spacing: 4px;
   color: #001F3D;
 }
 
 p {
   font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 20px;
   line-height: 24px;
   color: #0F4A6F;
@@ -338,7 +343,7 @@ p {
 }
 
 .landing {
-  height: 100vh;
+  height: 85vh;
 }
 
 .landingTextAndImage {
@@ -355,7 +360,13 @@ p {
 }
 
 .landingText {
-  width: 40%;
+  width: 50%;
+}
+.landingText h1 {
+  padding-bottom: 50px;
+}
+.landingText p {
+  padding-bottom: 40px;
 }
 
 .iconsFlex {
@@ -375,17 +386,126 @@ p {
 
 .landingIcon {
   padding: 7px;
-  background: black;
-  background: #001F3D;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: #181717;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.75);
 }
 
 .portfolio {
   background: url("../../portfolioBackground.png");
-  background-size: contain;
-  height: 1324px;
+  background-size: cover;
+  height: 1100px;
   background-repeat: no-repeat;
+  background-position-y: -95px;
+  background-position-x: 35%;
+}
+
+.portfolioHeading {
+  padding: 75px 0px;
+  width: 400px;
+  margin: 0 auto;
+}
+
+h2 {
+  border: 10px solid #001F3D;
+  padding: 30px 30px;
+  margin-bottom: 30px;
+}
+
+.portfolioBar {
+  width: 100%;
+  height: 100px;
+  background: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pBarP {
+  width: 15%;
+  text-align: center;
+}
+.pBarP p {
+  font-size: 14px;
+  padding-bottom: 20px;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+
+.pBarA {
+  border-bottom: 2px solid white;
+}
+.pBarA p {
+  color: white;
+}
+
+.pBarB {
+  border-bottom: 2px solid grey;
+}
+.pBarB p {
+  color: grey;
+}
+
+.projectRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.projectRowA {
+  border-bottom: 4px solid black;
+}
+
+.project {
+  width: calc(50% - .5px);
+  height: 300px;
+}
+.project img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.pageTurners {
+  -o-object-position: top;
+     object-position: top;
+}
+
+h3 {
+  border: 10px solid #001F3D;
+  padding: 25px 25px;
+  width: 400px;
+  margin: 60px auto;
+}
+
+h4 {
+  margin: 60px auto;
+  text-align: center;
+  padding-right: 10px;
+}
+
+.techStack {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.tech {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 25%;
 }
 
 body, html {
@@ -394,7 +514,7 @@ body, html {
 }
 
 .wrapper {
-  width: 85%;
+  width: 82.5%;
   max-width: 1400px;
   margin: 0 auto;
 }

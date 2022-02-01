@@ -2,7 +2,7 @@ $mont: 'Montserrat', sans-serif;
 
 h1 {
     font-family: $mont;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 40px;
     line-height: 50px;
     color: #0F4A6F;
@@ -17,7 +17,7 @@ h2 {
     font-size: 30px;
     line-height: 38px;
     text-align: center;
-    letter-spacing: 44%;
+    letter-spacing: 17px;
     color: #001F3D;
 }
 
@@ -28,7 +28,7 @@ h3 {
     font-weight: 700;
     font-size: 30px;
     line-height: 38px;
-    letter-spacing: 36%;
+    letter-spacing: 17px;
     text-align: center;
     color: #001F3D;
 }
@@ -40,14 +40,14 @@ h4 {
     font-weight: 700;
     font-size: 30px;
     line-height: 30px;
-    letter-spacing: 18.5%;
+    letter-spacing: 4px;
     color: #001F3D
 }
 
 //body paragraphs, contact sheet
 p {
     font-family: $mont;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 20px;
     line-height: 24px;
     color: #0F4A6F
