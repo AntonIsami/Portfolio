@@ -1,0 +1,16 @@
+.navFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+}
+.linkFlex {
+    display: flex;
+    width: 33%;
+    justify-content: space-evenly;
+}
+.navLink {
+    list-style-type: none;
+    
+}

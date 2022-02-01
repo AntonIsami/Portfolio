@@ -1,9 +1,12 @@
 @import "./partials/normalize";
 @import "./partials/typography";
+@import "./partials/nav";
+@import "./partials/landing";
+@import "./partials/portfolioSection";
 
 body, html {
     font-size: 125%;
-    background-color: #E5E5E5;
+    background-color: #CCDADA;
 }
 
 .wrapper {

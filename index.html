@@ -5,54 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header role="header">
-        <nav role="navigation" class="navFlex">
+        <nav role="navigation" class="navFlex wrapper">
             <img src="" alt="logo image"/>
             <ul class="linkFlex">
-                <li>Portfolio</li>
-                <li>About</li>
-                <li>Contact</li>
+                <li class="navLink">Portfolio</li>
+                <li class="navLink">About</li>
+                <li class="navLink">Contact</li>
             </ul>
         </nav>
     </header>
     <main>
 
-        <section class="landing">
-            <div class="landingText">
-                <h1>Hi, I am Antoni, <br>Front-End Developer</h1>
-                <p></p>
+        <section class="landing wrapper">
+
+            <div class="landingTextAndImage">
+                <div class="landingText">
+                    <h1>Hi, I am Antoni, <br>Front-End Developer</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, doloribus hic. Dicta illum ipsam odit vitae accusantium, in iure pariatur autem, consequuntur a necessitatibus minima. Ratione veritatis libero veniam ipsam!</p>
+                </div>
+                <img src="" alt="portrait image of portfolio creator"/>
             </div>
-            <img src="" alt="portrait image of portfolio creator"/>
-        </section>
-
-        <section>
-
+       
             <ul class="iconsFlex">
-                <li>
+                <li class="landingLi">
                     <div>
-
+                        <span class="iconify-inline landingIcon" data-icon="fontisto:at" style="color: white;" data-width="38" data-height="34"></span>
                     </div>
                 </li>
 
-                <li>
+                <li class="landingLi">
                     <div>
-
+                        <span class="iconify-inline landingIcon" data-icon="akar-icons:github-fill" style="color: white;" data-width="38"
+                            data-height="34"></span>
                     </div>
                 </li>
 
-                <li>
+                <li class="landingLi">
                     <div>
-
+                        <span class="iconify-inline landingIcon" data-icon="entypo-social:linkedin-with-circle" style="color: white;" data-width="38" data-height="34"></span>
                     </div>
                 </li>
             
             </ul>
             
-
+        <span class="iconify" data-icon="bi:arrow-down" data-width="45" data-height="70"></span>
+        
+        </section>
+        <section class="portfolio">
+            <h2>Portfolio</h2>
         </section>
     </main>
+    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
