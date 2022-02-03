@@ -61,3 +61,8 @@ footer {
         color: white;
     }
 }
+.doubleArrow {
+    &:hover {
+        transform: translateY(-10px);
+    }
+}
