@@ -1,10 +1,11 @@
 .portfolio{
     background: url("../../portfolioBackground.png");
     background-size:cover;
-    height: 2350px;
+    height: 3100px;
     background-repeat: no-repeat;
     background-position-y: -350px;
     background-position-x: 35%;
+    margin-bottom: 20px;
     
 }
 .projectDisplay {
@@ -55,7 +56,8 @@ h2 {
     }
 }
 .projectRow {
-    // display: flex;
+    display: flex;
+    justify-content: space-around;
     margin: 0;
     padding: 0;
 }
@@ -63,15 +65,11 @@ h2 {
     border-bottom: 4px solid black;
 }
 .project {
-    width: 100%;
-    height: 450px;
+    width: 40%;
     img {
         width: 100%;
         height: 100%;
-        object-fit: cover;  
+        object-fit: contain; 
     }
-    
 }
-.pageTurners {
-    object-position: top;
-}
+

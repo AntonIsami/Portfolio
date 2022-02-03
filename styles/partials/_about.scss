@@ -23,7 +23,7 @@ h4 {
 .tech {
     display: flex;
     flex-direction: column;
-    width: 25%;
+    width: 20%;
     padding-bottom: 100px;
     p {
         text-transform: uppercase;
@@ -40,6 +40,6 @@ h4 {
         width: 50%;
     }
 }
-.tech:last-of-type {
-    width: 100%;
-}
+// .tech:last-of-type {
+//     width: 100%;
+// }
