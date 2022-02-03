@@ -8,16 +8,20 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Nunito:wght@400;700&display=swap"
+    rel="stylesheet">
 </head>
 <body>
-    <header role="header">
+    <header role="header" id="top">
         <nav role="navigation" class="navFlex wrapper">
-            <img src="" alt="logo image"/>
+            <div class="logoDiv">
+                <img src="logo.jpg" class="logoImage" alt="logo image"/>
+            </div>
             <ul class="linkFlex">
-                <li class="navLink">Portfolio</li>
-                <li class="navLink">About</li>
-                <li class="navLink">Contact</li>
+                <li class="navLink"><a href="#portfolio">Portfolio</a></li>
+                <li class="navLink"><a href="#about">About</a></li>
+                <li class="navLink"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -27,38 +31,40 @@
 
             <div class="landingTextAndImage">
                 <div class="landingText">
-                    <h1>Hi, I am Antoni, <br>Front-End Developer</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, doloribus hic. Dicta illum ipsam odit vitae accusantium, in iure pariatur autem, consequuntur a necessitatibus minima. Ratione veritatis libero veniam ipsam!</p>
+                    <h1>Hi, I am Antoni. <br>Front-End Developer</h1>
+                    <p>I am a Sudanese-Canadian junior web developer who specializes in making responsive applications, and more importantly, applications that are responsibly accessible. <br><br>Take a look at my porfolio below, or follow the links here to my Email, Github, and LinkedIn!  </p>
                 </div>
-                <img src="" alt="portrait image of portfolio creator"/>
+                <div class="portraitDiv">
+                    <img class="portraitImage" src="Portrait1.jpg" alt="portrait of creator"/>
+                </div>
             </div>
        
             <ul class="iconsFlex">
                 <li class="landingLi">
                     <div>
-                        <span class="iconify-inline landingIcon" data-icon="fontisto:at" style="color: white;" data-width="38" data-height="34"></span>
+                        <a href="mailto:antoniibrahimdeveloper@gmail.com"><span class="iconify-inline landingIcon" data-icon="fontisto:at" style="color: white;" data-width="38" data-height="34"></span></a>
                     </div>
                 </li>
 
                 <li class="landingLi">
                     <div>
-                        <span class="iconify-inline landingIcon" data-icon="akar-icons:github-fill" style="color: white;" data-width="38"
-                            data-height="34"></span>
+                        <a href="https://www.github.com/antonisami" target="_blank"><span class="iconify-inline landingIcon" data-icon="akar-icons:github-fill" style="color: white;" data-width="38"
+                            data-height="34"></span></a>
                     </div>
                 </li>
 
                 <li class="landingLi">
                     <div>
-                        <span class="iconify-inline landingIcon" data-icon="entypo-social:linkedin-with-circle" style="color: white;" data-width="38" data-height="34"></span>
+                        <a href="https://www.linkedin.com/in/antoniib/" target="_blank"><span class="iconify-inline landingIcon" data-icon="entypo-social:linkedin-with-circle" style="color: white;" data-width="38" data-height="34"></span></a>
                     </div>
                 </li>
             
             </ul>
             
-        <span class="iconify" data-icon="bi:arrow-down" data-width="45" data-height="70"></span>
+        <a href="#portfolio" class="landingArrow"><span class="iconify" data-icon="bi:arrow-down" data-width="45" data-height="70"></span></a>
         
         </section>
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
             <div class="portfolioHeading">
                  <h2>Portfolio</h2>
             </div>
@@ -71,7 +77,7 @@
                 </div>
             </div>
             <div class="projectDisplay">
-                <div class="projectRow projectRowA">
+                <div class="projectRow projectRowA wrapper">
                     <div class="project">
                         <img src="marvin-meyer-SYTO3xs06fU-unsplash.jpg" alt="job search site preview"/>
                     </div>
@@ -79,7 +85,7 @@
                         <img class="pageTurners" src="pageTurners2.png" alt="reading list application preview" />
                     </div>
                 </div>
-                <div class="projectRow projectRowB">
+                <div class="projectRow projectRowB wrapper">
                     <div class="project">
                         <img src="pokeCatch2.png" alt="pokemon search tool preview" />
                     </div>
@@ -91,41 +97,132 @@
             <div class="portfolioBar">
             </div>
         </section>
-        <section class="wrapper about">
+        <section class="wrapper about" id="about">
             
             <h3>ABOUT ME</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni molestiae voluptas maxime non sed, iure fugiat quod deserunt qui ipsum.</p>
+            <p class="aboutP">Originally a self-taught coder, I became addicted to solving coding issues but required a better foundation. <br><br> I transitioned into the Juno College of Technology Immersive Web Development Bootcamp, and the Javascript & jQuery course to further solidify my programming foundation.   </p>
             <h4>USING NOW: </h4>
 
             <div class="techStack">
                 <div class="tech">
-                    <span class="iconify-inline" data-icon="vscode-icons:file-type-html" data-width="110" data-height="110"></span>
+                    <span class="iconify-inline stackIcon" data-icon="vscode-icons:file-type-html" data-width="110" data-height="110"></span>
                     <p class="techStackName">HTML5</p>
                 </div>
                 <div class="tech">
-                    <p class="techStackName">HTML5</p>
+                    <span class="iconify-inline stackIcon" data-icon="vscode-icons:file-type-css" data-width="110" data-height="110"></span>
+                    <p class="techStackName">CSS3</p>
                 </div>
                 <div class="tech">
-                    <p class="techStackName">HTML5</p>
+                    <span class="iconify-inline stackIcon" data-icon="logos:sass" data-width="110" data-height="110"></span>
+                    <p class="techStackName">SASS</p>
                 </div>
                 <div class="tech">
-                    <p class="techStackName">HTML5</p>
+                    <span class="iconify-inline stackIcon" data-icon="logos:javascript" data-width="110" data-height="110"></span>
+                    <p class="techStackName">Javascript</p>
                 </div>
                 <div class="tech">
-                    <p class="techStackName">HTML5</p>
+                    <span class="iconify-inline stackIcon" data-icon="logos:react" style="color: blue;" data-width="110" data-height="110"></span>
+                    <p class="techStackName">React</p>
                 </div>
                 <div class="tech">
-                    <p class="techStackName">HTML5</p>
+                    <span class="iconify-inline stackIcon" data-icon="icomoon-free:git" style="color: red;" data-width="110" data-height="110"></span>
+                    <p class="techStackName">Git</p>
                 </div>
                 <div class="tech">
-                    <p class="techStackName">HTML5</p>
+                    <span class="iconify-inline stackIcon" data-icon="logos:firebase" style="color: red;" data-width="110" data-height="110"></span>
+                    <p class="techStackName">Firebase</p>
                 </div>
                 <div class="tech">
-                    <p class="techStackName">HTML5</p>
+                    <span class="iconify-inline stackIcon" data-icon="grommet-icons:figma" style="color: red;" data-width="110"
+                        data-height="110"></span>
+                    <p class="techStackName">Figma</p>
+                </div>
+                <div class="tech">
+                    <span class="iconify-inline stackIcon" data-icon="akar-icons:jquery-fill" data-width="110" data-height="110"></span>
+                    <p class="techStackName">jQuery</p>
+                </div>
+            </div>
+            <h4>CURRENTLY LEARNING:</h4>
+            <div class="techStack">
+                <div class="tech">
+                    <span class="iconify-inline stackIcon" data-icon="logos:bootstrap" data-width="110" data-height="110"></span>
+                    <p class="techStackName">Bootstrap</p>
+                </div>
+                <div class="tech">
+                    <span class="iconify-inline stackIcon" data-icon="vscode-icons:file-type-photoshop" data-width="110" data-height="110"></span>
+                    <p class="techStackName">Photoshop</p>
+                </div>
+            </div>
+
+            <div class="recentPostsDiv">
+                <div class="recentHeading">
+                    <p class="recentPosts">Recent Posts</p>
+                    <p class="viewAll"><a href="https://www.linkedin.com/in/antoniib/" target="_blank">View all</a></p>
+                </div>
+                <div class="posts">
+                    <div class="post">
+                        <div class="postText">
+                            <h5><a href="https://www.linkedin.com/posts/antoniib_project-react-google-activity-6894794153616654336--Cya" target="_blank">Making a Reading List App linked to Firebase</a></h5>
+                            <p>February 2 2021 | React, Rest API</p>
+                            <p>
+                                With the help of my group-mates, we created a simple tool for readers using React and the Google Books API to help track
+                                your current reading list.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <div class="postText">
+                            <h5><a href="https://medium.com/@antoni.ibrahim/careers-courage-and-commitment-16b491cb8a33" target="_blank">Careers, Courage and Commitment</a></h5>
+                            <p>November 31 2021 | Web Development</p>
+                            <p>Here we go again. Journey with me on a bit of a ramble.
+                            
+                            Careers are an interesting concept.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h3>CONTACT</h3>
+            <div class="contact wrapper">
+                <img src="contactImage.jpg" alt="ocean waves" class="contactImage">
+                <div class="contactForm">
+                    <label for="name" class="sr-only">Full Name</label>
+                    <input id="name" type="text" placeholder="Full Name" class="contactInput">
+                    <label for="email" class="sr-only">Email</label>
+                    <input id="email" type="email" placeholder="Email" class="contactInput">
+                    <label for="message" class="sr-only">Message</label>
+                    <input id="message" type="text" placeholder="Message" class="contactInput">
+                </div>
+                <div class="contactInfo">
+                        <h6>Contact Email</h6>
+                        <p>AntoniibrahimDeveloper@gmail.com</p>
+                        <h6>Based In</h6>
+                        <p>Toronto, Ontario</p>
                 </div>
             </div>
         </section>
     </main>
+    <footer>
+        <div class="footerDiv">
+            <a href="#top"><span class="iconify-inline" data-icon="ic:baseline-keyboard-double-arrow-up" style="color: white;" data-width="30"
+                data-height="30"></span>
+            <p>Back to Top</p></a>
+            <div class="footerLinks">
+                <a href="https://www.github.com/antonisami" target="_blank"><span class="iconify-inline footerIcon"
+                        data-icon="akar-icons:github-fill" style="color: white;" data-width="38" data-height="34"></span></a>
+                
+                <a href="https://www.linkedin.com/in/antoniib/" target="_blank"><span class="iconify-inline footerIcon"
+                        data-icon="entypo-social:linkedin-with-circle" style="color: white;" data-width="38"
+                        data-height="34"></span></a>
+              
+            </div>
+            <div class="footerR">
+                <p>2022 &copy; Antoni Ibrahim</p>
+                <p>All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
     <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
     <script src="script.js"></script>
 </body>

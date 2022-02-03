@@ -1,4 +1,5 @@
 $mont: 'Montserrat', sans-serif;
+$nun: 'Nunito', sans-serif;
 
 h1 {
     font-family: $mont;
@@ -44,6 +45,25 @@ h4 {
     color: #001F3D
 }
 
+h5 {
+    font-family: $mont;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: left;
+    vertical-align: top;
+    color: #21243D;
+    padding: 10px;
+}
+// contact subheadings
+h6 {
+
+    font-family: $mont;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #0F4A6F;
+}
 //body paragraphs, contact sheet
 p {
     font-family: $mont;

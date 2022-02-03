@@ -8,15 +8,24 @@
     padding-top: 100px;
 }
 .landingText {
-    width: 50%;
+    width: 45%;
     h1 {
-        padding-bottom: 50px;
+        padding-bottom: 30px;
     }
     p {
-        padding-bottom: 40px
+        padding-bottom: 40px;
+        // text-transform: capitalize;
     }
 }
-
+.portraitDiv {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+.portraitImage {
+    width: 400px;
+    border-radius: 50%;
+}
 .iconsFlex {
     display: flex;
     width: 18%;
@@ -30,4 +39,15 @@
     padding: 7px;
     background: #181717;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.75);
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.75);
+    }
+}
+.landingArrow {
+    text-decoration: none;
+    color: black;
+    &:hover{
+            color: #F8EDEB;
+    }
 }

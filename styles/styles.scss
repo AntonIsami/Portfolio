@@ -4,10 +4,14 @@
 @import "./partials/landing";
 @import "./partials/portfolioSection";
 @import "./partials/about";
+@import "./partials/recentPosts";
+@import "./partials/contact";
+@import "./partials/footer";
 
 body, html {
     font-size: 125%;
     background-color: #CCDADA;
+    scroll-behavior: smooth;
 }
 
 .wrapper {

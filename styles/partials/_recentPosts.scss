@@ -1,0 +1,54 @@
+.recentPostsDiv {
+    background: #0F4A6F;
+    height: 450px;
+}
+.recentHeading {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    p {
+    color: white;
+    padding-bottom: 10px;
+    }
+    p:nth-of-type(2){
+        text-align: right;
+    }
+}
+.posts {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.post {
+    background: white;
+    height: 300px;
+    width: 47%;
+}
+.postText {
+    margin: 15px;
+    p {
+        text-align: left;
+        margin-left: 10px;
+        padding-bottom: 10px;
+    }
+    p:nth-of-type(2){
+        color: black;
+    }
+}
+h5 a {
+    text-decoration: none;  
+    color: #21243D;
+    &:hover{
+            color: #FEC89A;
+    }
+}
+.viewAll a {
+    text-decoration: none;
+    color: white;
+    &:hover{
+            color: #FEC89A;
+    }
+}

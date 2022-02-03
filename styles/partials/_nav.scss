@@ -3,14 +3,31 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-top: 50px;
+    padding-top: 30px;
 }
 .linkFlex {
     display: flex;
-    width: 33%;
-    justify-content: space-evenly;
+    width: 30%;
+    justify-content: space-between;
 }
 .navLink {
     list-style-type: none;
-    
+    a {
+        text-decoration: none;
+        color: black;
+        &:hover{
+            color: #F8EDEB;
+        }
+    }
+}
+.logoDiv {
+    position: relative;
+    width: 10%;
+    height: 100px;
+}
+.logoImage {
+    width: 100%;
+    position: absolute;
+    top: -10px;
+    left: -25px;
 }

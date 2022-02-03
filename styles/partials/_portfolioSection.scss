@@ -1,11 +1,15 @@
 .portfolio{
     background: url("../../portfolioBackground.png");
     background-size:cover;
-    height: 1100px;
+    height: 2350px;
     background-repeat: no-repeat;
-    background-position-y: -95px;
+    background-position-y: -350px;
     background-position-x: 35%;
     
+}
+.projectDisplay {
+    background-color: #1A1A1A;
+
 }
 .portfolioHeading {
     padding: 75px 0px;
@@ -20,7 +24,7 @@ h2 {
 .portfolioBar {
     width: 100%;
     height: 100px;
-    background: #000000;
+    background: #1A1A1A;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,19 +55,16 @@ h2 {
     }
 }
 .projectRow {
-    display: flex;
+    // display: flex;
     margin: 0;
     padding: 0;
-    // :nth-child(2) {
-    //     border-left: 1px solid black;
-    // }
 }
 .projectRowA {
     border-bottom: 4px solid black;
 }
 .project {
-    width: calc(50% - .5px);  
-    height: 300px;
+    width: 100%;
+    height: 450px;
     img {
         width: 100%;
         height: 100%;

@@ -9,11 +9,37 @@ h4 {
    text-align: center;
    padding-right: 10px;
 }
+.about p {
+    text-align: center;
+}
+.aboutP {
+    width: 90%;
+    margin: 0 auto;
+}
 .techStack {
     display: flex;
     flex-wrap: wrap;
 }
 .tech {
     display: flex;
+    flex-direction: column;
     width: 25%;
+    padding-bottom: 100px;
+    p {
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+}
+.stackIcon {
+    margin: 30px auto;
+}
+.techStack:nth-of-type(2){
+    width: 80%;
+    margin: 0 auto;
+    .tech {
+        width: 50%;
+    }
+}
+.tech:last-of-type {
+    width: 100%;
 }
