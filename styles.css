@@ -462,15 +462,15 @@ p {
 .portfolio {
   background: url("../../portfolioBackground.png");
   background-size: cover;
-  height: 1500px;
   background-repeat: no-repeat;
-  background-position-y: -350px;
+  background-position-y: -50px;
   background-position-x: 35%;
   margin-bottom: 20px;
 }
 
 .projectDisplay {
-  background-color: #1A1A1A;
+  background-color: #000000;
+  display: none;
 }
 
 .portfolioHeading {
@@ -488,7 +488,7 @@ h2 {
 .portfolioBar {
   width: 100%;
   height: 100px;
-  background: #1A1A1A;
+  background: #000000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -517,12 +517,19 @@ h2 {
 .pBarA p {
   color: white;
 }
+.pBarA p:hover {
+  font-size: 16px;
+}
 
 .pBarB {
   border-bottom: 2px solid grey;
 }
 .pBarB p {
   color: grey;
+}
+.pBarB p:hover {
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .projectRow {
@@ -542,7 +549,7 @@ h2 {
 
 .project {
   width: 45%;
-  background: rgba(104, 104, 104, 0.091);
+  background: rgba(196, 192, 192, 0.476);
   border-radius: 5px;
   border: solid 1rem rgba(104, 104, 104, 0.091);
   overflow: hidden;
@@ -561,7 +568,7 @@ h2 {
   display: inline-block;
   overflow: hidden;
   height: 435px;
-  background: rgba(104, 104, 104, 0.091);
+  background: rgba(196, 192, 192, 0.476);
   border-radius: 5px;
   border: solid 1rem rgba(104, 104, 104, 0.091);
   margin-bottom: 25px;
@@ -574,6 +581,70 @@ h2 {
   z-index: 0;
   height: 700px;
   bottom: 0;
+}
+
+.featured {
+  background: #CCDADA;
+  width: 80%;
+  padding-top: 75px;
+  margin: 0 auto;
+  border-right: 150px solid black;
+  border-left: 150px solid black;
+  display: block;
+}
+
+.featuredProject {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 50px;
+  padding-top: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.featuredProjectImage {
+  width: 33%;
+  padding-right: 15px;
+}
+.featuredProjectImage img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.featuredProjectText {
+  width: 60%;
+}
+.featuredProjectText h4 {
+  margin: -10px 0 20px 0;
+  text-align: left;
+}
+.featuredProjectText span {
+  background: #001F3D;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 7px;
+  letter-spacing: 3px;
+  font-size: 18px;
+}
+
+.featureDescription {
+  padding-top: 20px;
+  font-size: 14px;
+  color: black;
+}
+
+.fPTS {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 h3 {
