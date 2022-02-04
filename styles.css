@@ -375,19 +375,18 @@ p {
 
 .logoDiv {
   position: relative;
-  width: 10%;
-  height: 100px;
+  width: 150px;
 }
 
 .logoImage {
   width: 100%;
   position: absolute;
-  top: -10px;
+  top: -45px;
   left: -25px;
 }
 
 .landing {
-  height: 85vh;
+  padding-bottom: 100px;
 }
 
 .landingTextAndImage {
@@ -565,7 +564,7 @@ h2 {
   height: 435px;
   position: relative;
   margin-bottom: 20px;
-  padding-right: 40px;
+  padding-right: 15px;
 }
 .project img {
   height: 550px;
@@ -652,8 +651,6 @@ h2 {
   width: 80%;
   padding-top: 75px;
   margin: 0 auto;
-  border-right: 145px solid black;
-  border-left: 145px solid black;
   display: block;
 }
 
@@ -772,6 +769,12 @@ h2 {
   color: white;
 }
 
+.featuredDiv {
+  width: 100%;
+  background: black;
+  margin: 0 auto;
+}
+
 h3 {
   border: 10px solid #001F3D;
   padding: 25px 25px;
@@ -875,7 +878,7 @@ h4 {
 
 .recentPostsDiv {
   background: #0F4A6F;
-  height: 450px;
+  padding-bottom: 70px;
 }
 
 .recentHeading {
@@ -910,7 +913,6 @@ h4 {
 
 .post {
   background: white;
-  height: 300px;
   width: 47%;
 }
 
@@ -974,6 +976,7 @@ h5 a:hover {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  width: 33%;
 }
 .contactForm button {
   background: #001F3D;
@@ -1026,6 +1029,7 @@ footer {
   background: #000000;
   height: 300px;
   margin: 0 auto;
+  bottom: 0;
 }
 footer a {
   text-decoration: none;
@@ -1101,6 +1105,251 @@ footer a {
           transform: translateY(-10px);
 }
 
+@media (max-width: 1000px) {
+  .linkFlex {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+
+  .fPTS {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .featuredProject {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .featuredProject span {
+    margin-bottom: 10px;
+  }
+
+  .featuredProjectImage {
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 25px;
+  }
+
+  .featuredProjectText {
+    width: 100%;
+  }
+  .featuredProjectText h4 {
+    text-align: center;
+  }
+
+  .featureDescription, .featured h5 {
+    text-align: center;
+  }
+
+  .projectRow {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .video, .video1, .projectText, .project {
+    width: 100%;
+  }
+
+  .projectText {
+    margin: 20px 0;
+  }
+
+  .techStackName {
+    font-size: 20px;
+  }
+
+  .contactInfo {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .contactInput {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    margin-bottom: 10px;
+  }
+
+  .contactForm {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contactImage {
+    width: 100%;
+  }
+
+  .contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (max-width: 700px) {
+  .footerR {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .footerR p:nth-of-type(1) {
+    line-height: 20px;
+  }
+
+  .postText h5 {
+    font-size: 16px;
+  }
+
+  .postText p, .techStackName {
+    font-size: 14px;
+  }
+
+  h4, h3 {
+    font-size: 25px;
+    margin: 20px auto;
+  }
+
+  .aboutText {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  .aboutText p {
+    font-size: 16px;
+  }
+
+  .aboutPicture {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  .aboutPicture img {
+    height: 70vh;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  .aboutDesc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .project {
+    padding-right: 0;
+  }
+
+  .projectRow {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+
+  .projectDisplay {
+    padding-top: 20px;
+  }
+
+  .landingTextAndImage {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .landingText, .portraitDiv, .iconsFlex {
+    width: 100%;
+  }
+
+  .landingText {
+    text-align: center;
+    padding-top: 25px;
+  }
+
+  .portraitDiv {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .iconsFlex {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+
+  .landingArrow {
+    position: absolute;
+    left: 47%;
+  }
+
+  .linkFlex {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 15%;
+  }
+
+  .navLink {
+    padding-bottom: 25px;
+  }
+
+  .logoImage {
+    position: relative;
+  }
+
+  .landingTextAndImage {
+    padding-top: 0;
+  }
+}
+@media (max-width: 500px) {
+  .portfolio {
+    background-size: auto;
+  }
+
+  h3 {
+    width: 70%;
+  }
+
+  .post {
+    background: white;
+    width: 100%;
+    border-bottom: 1px solid black;
+  }
+
+  .posts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .recentPostsDiv {
+    margin-left: 5px;
+  }
+
+  .tech, .techRow {
+    width: 33%;
+  }
+
+  .aboutPicture img {
+    height: 50vh;
+  }
+}
 body, html {
   font-size: 125%;
   background-color: #CCDADA;

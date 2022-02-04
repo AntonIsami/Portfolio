@@ -1,0 +1,168 @@
+@media (max-width: 1000px) {
+    .linkFlex {
+        justify-content: space-around;
+    }
+    .fPTS {
+        flex-direction: column; 
+        align-items: center;
+    }
+    .featuredProject {
+        flex-direction: column;
+        span {
+            margin-bottom: 10px;
+        }
+    }
+    .featuredProjectImage {
+        width: 70%;
+        margin: 0 auto;
+        padding-bottom: 25px;
+    }
+    .featuredProjectText {
+        width: 100%;
+        h4 {
+            text-align: center;
+        }
+    }
+    .featureDescription, .featured h5 {
+        text-align: center;
+    }
+    .projectRow {
+        flex-direction: column;
+    }
+    .video, .video1, .projectText, .project {
+        width: 100%;
+    }
+    .projectText {
+        margin: 20px 0;
+    }
+    .techStackName {
+        font-size: 20px;
+    }
+    .contactInfo {
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+    .contactInput {
+        width: 100%;
+        text-align: center;
+        padding: 30px 0;
+        margin-bottom: 10px;
+    }
+    .contactForm {
+        width: 100%;
+        text-align: center;
+    }
+    .contactImage {
+        width: 100%;
+    }
+    .contact {
+        flex-direction: column;
+    }
+}
+@media (max-width: 700px) {
+    .footerR {
+        flex-direction: column;
+    }
+    .footerR p:nth-of-type(1){
+        line-height: 20px;
+    }
+    .postText h5 {
+        font-size: 16px;
+    }
+    .postText p, .techStackName {
+        font-size: 14px;
+    }
+    h4, h3 {
+        font-size: 25px;
+        margin: 20px auto;
+    }
+    .aboutText{
+        width: 100%;
+        padding-bottom: 10px;
+        p   {
+        font-size: 16px;
+        }
+    }
+    .aboutPicture {
+        width: 100%;
+        padding-bottom: 10px;
+        img {
+            height: 70vh;
+            transform: rotate(90deg);
+            object-fit: cover;
+        }
+    }
+    .aboutDesc {
+        flex-direction: column;
+    }
+    .project {
+        padding-right: 0;
+    }
+    .projectRow {
+        flex-wrap: nowrap;
+    }
+    .projectDisplay {
+        padding-top: 20px;
+    }
+    .landingTextAndImage {
+        flex-direction: column-reverse;
+    }
+    .landingText, .portraitDiv, .iconsFlex {
+        width: 100%;
+    }
+    .landingText {
+        text-align: center;
+        padding-top: 25px;
+    }
+    .portraitDiv {
+        justify-content: center;
+    }
+    .iconsFlex {
+        justify-content: space-around;
+    }
+    .landingArrow {
+        position: absolute;
+        left: 47%;
+    }
+    .linkFlex {
+        align-items: center;
+        flex-direction: column;
+        width: 15%;
+    }
+    .navLink {
+        padding-bottom: 25px;
+    }
+    .logoImage {
+        position: relative;
+    }
+    .landingTextAndImage {
+        padding-top: 0;
+    }
+
+}
+@media (max-width: 500px) {
+    .portfolio {
+        background-size: auto;
+    }
+    h3 {
+        width: 70%
+    }
+    .post {
+    background: white;
+    width: 100%;
+    border-bottom: 1px solid black;
+    }
+    .posts {
+        flex-direction: column;
+    }
+    .recentPostsDiv {
+        margin-left: 5px;
+    }
+    .tech, .techRow {
+        width: 33%
+    }
+    .aboutPicture img {
+        height: 50vh;
+    }
+}

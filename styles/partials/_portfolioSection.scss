@@ -81,7 +81,7 @@ h2 {
     height: 435px;
     position: relative;
     margin-bottom: 20px;
-    padding-right: 40px;
+    padding-right: 15px;
     img {
         height: 550px;
         width: 100%;
@@ -162,8 +162,8 @@ h2 {
     width: 80%; 
     padding-top: 75px;
     margin: 0 auto;
-    border-right: 145px solid black;
-    border-left: 145px solid black;
+    // border-right: 145px solid black;
+    // border-left: 145px solid black;
     display: block;
 }
 .featuredProject {
@@ -265,4 +265,9 @@ h2 {
             color: white;
         }
     }
+}
+.featuredDiv {
+    width: 100%;
+    background: black;
+    margin: 0 auto;
 }
