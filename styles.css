@@ -986,7 +986,6 @@ h5 a:hover {
   font-size: 20px;
   padding: 10px 0;
   width: 75%;
-  margin: 0 auto;
 }
 
 .submittedContact {
@@ -1183,6 +1182,9 @@ footer a {
   .contactForm {
     width: 100%;
     text-align: center;
+  }
+  .contactForm button {
+    margin: 0 auto;
   }
 
   .contactImage {
