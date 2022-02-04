@@ -363,9 +363,14 @@ p {
 .navLink a {
   text-decoration: none;
   color: black;
+  padding: 10px 20px;
 }
 .navLink a:hover {
-  color: #F8EDEB;
+  border: 2px solid #c5e6dc;
+  background: #c7e6e0;
+  border-radius: 5px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .logoDiv {
@@ -461,7 +466,7 @@ p {
 
 .portfolio {
   background: url("../../portfolioBackground.png");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position-y: -50px;
   background-position-x: 35%;
@@ -488,7 +493,7 @@ h2 {
 .portfolioBar {
   width: 100%;
   height: 100px;
-  background: #000000;
+  background: #1A1A1A;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -512,20 +517,21 @@ h2 {
 }
 
 .pBarA {
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid grey;
 }
 .pBarA p {
-  color: white;
+  color: grey;
 }
 .pBarA p:hover {
   font-size: 16px;
+  cursor: pointer;
 }
 
 .pBarB {
-  border-bottom: 2px solid grey;
+  border-bottom: 2px solid white;
 }
 .pBarB p {
-  color: grey;
+  color: white;
 }
 .pBarB p:hover {
   font-size: 16px;
@@ -538,8 +544,13 @@ h2 {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .projectRowA {
@@ -549,11 +560,12 @@ h2 {
 
 .project {
   width: 45%;
-  background: rgba(196, 192, 192, 0.476);
   border-radius: 5px;
-  border: solid 1rem rgba(104, 104, 104, 0.091);
   overflow: hidden;
   height: 435px;
+  position: relative;
+  margin-bottom: 20px;
+  padding-right: 40px;
 }
 .project img {
   height: 550px;
@@ -562,16 +574,48 @@ h2 {
      object-fit: cover;
 }
 
+.projectText {
+  width: 40%;
+  padding: 10px 20px 30px 20px;
+  margin: 75px 50px 75px 25px;
+  position: relative;
+  background: #CCDADA;
+}
+.projectText h5 {
+  text-align: center;
+  padding-bottom: 15px;
+  font-family: "Montserrat", sans-serif;
+  color: #001F3D;
+  border-bottom: 2px solid black;
+  margin-bottom: 5px;
+}
+.projectText p {
+  padding-bottom: 40px;
+  color: black;
+  text-align: left;
+  font-size: 14px;
+}
+.projectText p:nth-of-type(2) {
+  letter-spacing: 3px;
+  background: #001F3D;
+  padding: 10px 10px;
+  text-align: center;
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  width: 90%;
+  margin: 0 auto;
+}
+
 .video {
   width: 45%;
   position: relative;
   display: inline-block;
   overflow: hidden;
   height: 435px;
-  background: rgba(196, 192, 192, 0.476);
   border-radius: 5px;
-  border: solid 1rem rgba(104, 104, 104, 0.091);
   margin-bottom: 25px;
+  padding-top: 20px;
 }
 .video video {
   position: absolute;
@@ -583,13 +627,32 @@ h2 {
   bottom: 0;
 }
 
+.video1 {
+  width: 45%;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  height: 435px;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  padding-top: 20px;
+}
+.video1 video {
+  position: absolute;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+  bottom: 0;
+}
+
 .featured {
-  background: #CCDADA;
+  background: white;
   width: 80%;
   padding-top: 75px;
   margin: 0 auto;
-  border-right: 150px solid black;
-  border-left: 150px solid black;
+  border-right: 145px solid black;
+  border-left: 145px solid black;
   display: block;
 }
 
@@ -597,7 +660,7 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-bottom: 50px;
+  padding-bottom: 80px;
   padding-top: 10px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -611,6 +674,7 @@ h2 {
 .featuredProjectImage img {
   width: 100%;
   border-radius: 10px;
+  border: 0.25px solid black;
 }
 
 .featuredProjectText {
@@ -619,6 +683,15 @@ h2 {
 .featuredProjectText h4 {
   margin: -10px 0 20px 0;
   text-align: left;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+.featuredProjectText h4 a {
+  text-decoration: none;
+  color: #001F3D;
+}
+.featuredProjectText h4 a:hover {
+  text-decoration: underline;
 }
 .featuredProjectText span {
   background: #001F3D;
@@ -645,6 +718,51 @@ h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.mask {
+  opacity: 0;
+  position: absolute;
+  height: 100%;
+  width: 95%;
+  background: black;
+  margin: 0 auto;
+  text-align: center;
+  padding: 75px 25px;
+  z-index: 1;
+  top: 0;
+}
+.mask:hover {
+  opacity: 0.75;
+}
+.mask p, .mask h5 {
+  color: white;
+  text-align: center;
+}
+.mask h5 {
+  padding-bottom: 25px;
+  padding-top: 100px;
+}
+.mask p {
+  padding-bottom: 25px;
+}
+.mask p:nth-of-type(2) {
+  letter-spacing: 6px;
+}
+.mask button {
+  background: #001F3D;
+  color: white;
+  opacity: 1;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  margin-right: 20px;
+  font-family: "Montserrat", sans-serif;
+  padding: 10px 10px;
+}
+.mask button:hover {
+  background: red;
+  color: white;
 }
 
 h3 {
@@ -686,9 +804,25 @@ h4 {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 20%;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 }
 .tech p {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.techRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20%;
+  padding-bottom: 50px;
+}
+.techRow p {
   text-transform: uppercase;
   letter-spacing: 4px;
 }
@@ -807,6 +941,22 @@ h5 a:hover {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
+.contactForm button {
+  background: #001F3D;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 10px 0;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.submittedContact {
+  width: 33%;
+  text-align: center;
+  margin: 0 auto;
+}
 
 .contactInput {
   border: none;
@@ -821,6 +971,7 @@ h5 a:hover {
 }
 
 .contactInfo {
+  width: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -920,6 +1071,7 @@ body, html {
   font-size: 125%;
   background-color: #CCDADA;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .wrapper {

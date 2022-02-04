@@ -15,8 +15,12 @@
     a {
         text-decoration: none;
         color: black;
+        padding: 10px 20px;
         &:hover{
-            color: #F8EDEB;
+            border: 2px solid rgb(197, 230, 220);
+            background:rgb(199, 230, 224);
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
     }
 }

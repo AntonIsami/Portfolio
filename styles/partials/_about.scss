@@ -25,7 +25,17 @@ h4 {
     display: flex;
     flex-direction: column;
     width: 20%;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
+    p {
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+}
+.techRow {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    padding-bottom: 50px;
     p {
         text-transform: uppercase;
         letter-spacing: 4px;
@@ -34,6 +44,7 @@ h4 {
 .stackIcon {
     margin: 30px auto;
 }
+
 .techStack:nth-of-type(2){
     width: 80%;
     margin: 0 auto;

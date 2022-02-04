@@ -12,6 +12,21 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    button {
+        background: #001F3D;
+        color: white;
+        font-family: $mont;
+        font-weight: 500;
+        font-size: 20px;
+        padding: 10px 0;
+        width: 75%;
+        margin: 0 auto;
+    }
+}
+.submittedContact {
+    width: 33%;
+    text-align: center;
+    margin: 0 auto;
 }
 .contactInput {
     border: none;
@@ -25,6 +40,7 @@
     font-size: 20px;
 }
 .contactInfo {
+    width: 25%;
     display: flex;
     flex-direction: column;
     justify-content: center;
