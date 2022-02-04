@@ -579,6 +579,7 @@ h2 {
   padding: 10px 20px 30px 20px;
   margin: 75px 50px 75px 25px;
   position: relative;
+  border-radius: 4px;
   background: #CCDADA;
 }
 .projectText h5 {
@@ -784,13 +785,39 @@ h4 {
   padding-right: 10px;
 }
 
-.about p {
-  text-align: center;
+.aboutDesc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.aboutP {
-  width: 90%;
-  margin: 0 auto;
+.aboutText {
+  width: 50%;
+}
+.aboutText p {
+  text-align: left;
+  padding: 25px 0;
+  font-size: 18px;
+}
+
+.aboutPicture {
+  width: 40%;
+}
+.aboutPicture img {
+  width: 100%;
+  height: 60vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 50%;
+  border: 10px solid white;
 }
 
 .techStack {
@@ -815,6 +842,7 @@ h4 {
 .tech p {
   text-transform: uppercase;
   letter-spacing: 4px;
+  text-align: center;
 }
 
 .techRow {
@@ -837,11 +865,11 @@ h4 {
   margin: 30px auto;
 }
 
-.techStack:nth-of-type(2) {
+.techStack:nth-of-type(3) {
   width: 80%;
   margin: 0 auto;
 }
-.techStack:nth-of-type(2) .tech {
+.techStack:nth-of-type(3) .tech {
   width: 50%;
 }
 

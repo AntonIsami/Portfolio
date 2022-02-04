@@ -9,14 +9,32 @@ h4 {
    text-align: center;
    padding-right: 10px;
 }
+.aboutDesc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.aboutText {
+    width: 50%;
+    p {
+        text-align: left;
+        padding: 25px 0;
+        font-size: 18px;
+    }
+}
+.aboutPicture {
+    width: 40%;
+    img {
+        width: 100%;
+        height: 60vh;
+        object-fit: contain;
+        object-position: center;
+        border-radius: 50%;
+        border: 10px solid white;
+    }
+}
 
-.about p {
-    text-align: center;
-}
-.aboutP {
-    width: 90%;
-    margin: 0 auto;
-}
+
 .techStack {
     display: flex;
     flex-wrap: wrap;
@@ -29,6 +47,7 @@ h4 {
     p {
         text-transform: uppercase;
         letter-spacing: 4px;
+        text-align: center;
     }
 }
 .techRow {
@@ -45,7 +64,7 @@ h4 {
     margin: 30px auto;
 }
 
-.techStack:nth-of-type(2){
+.techStack:nth-of-type(3){
     width: 80%;
     margin: 0 auto;
     .tech {
