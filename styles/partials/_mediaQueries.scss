@@ -28,12 +28,20 @@
     }
     .projectRow {
         flex-direction: column;
+        align-items: center;
+    }
+    .projectRowB, .projectRowD {
+        flex-direction: column-reverse;
     }
     .video, .video1, .projectText, .project {
         width: 100%;
     }
     .projectText {
         margin: 20px 0;
+        padding: 40px 25px;
+    }
+    .projectText a p {
+        width: 90%;
     }
     .techStackName {
         font-size: 20px;
@@ -63,6 +71,44 @@
         flex-direction: column;
     }
 }
+@media (max-width: 900px){
+    .landingTextAndImage {
+        flex-direction: column-reverse;
+    }
+    .landingText, .portraitDiv, .iconsFlex {
+        width: 100%;
+    }
+    .landingText {
+        text-align: center;
+        padding-top: 25px;
+    }
+    .portraitDiv {
+        justify-content: center;
+    }
+    .iconsFlex {
+        justify-content: space-around;
+    }
+    .landingArrow {
+        position: absolute;
+        left: 47%;
+    }
+    .linkFlex {
+        align-items: center;
+        flex-direction: column;
+        width: 15%;
+    }
+    .navLink {
+        padding-bottom: 25px;
+    }
+    .logoImage {
+        position: relative;
+    }
+    .landingTextAndImage {
+        padding-top: 0;
+    }
+
+}
+
 @media (max-width: 700px) {
     .footerR {
         flex-direction: column;
@@ -108,42 +154,7 @@
     .projectDisplay {
         padding-top: 20px;
     }
-    .landingTextAndImage {
-        flex-direction: column-reverse;
-    }
-    .landingText, .portraitDiv, .iconsFlex {
-        width: 100%;
-    }
-    .landingText {
-        text-align: center;
-        padding-top: 25px;
-    }
-    .portraitDiv {
-        justify-content: center;
-    }
-    .iconsFlex {
-        justify-content: space-around;
-    }
-    .landingArrow {
-        position: absolute;
-        left: 47%;
-    }
-    .linkFlex {
-        align-items: center;
-        flex-direction: column;
-        width: 15%;
-    }
-    .navLink {
-        padding-bottom: 25px;
-    }
-    .logoImage {
-        position: relative;
-    }
-    .landingTextAndImage {
-        padding-top: 0;
-    }
-
-}
+}   
 @media (max-width: 500px) {
     .portfolio {
         background-size: auto;

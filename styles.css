@@ -276,6 +276,7 @@ h6 {
   font-size: 18px;
   line-height: 24px;
   color: #0F4A6F;
+  text-align: center;
 }
 
 p {
@@ -403,13 +404,17 @@ p {
 }
 
 .landingText {
-  width: 45%;
+  width: 55%;
 }
 .landingText h1 {
   padding-bottom: 30px;
 }
 .landingText p {
   padding-bottom: 40px;
+}
+.landingText p:nth-of-type(2) {
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .portraitDiv {
@@ -425,6 +430,9 @@ p {
 .portraitImage {
   width: 400px;
   border-radius: 50%;
+  border: 6px solid white;
+  -webkit-box-shadow: 10px 10px 20px 5px;
+          box-shadow: 10px 10px 20px 5px;
 }
 
 .iconsFlex {
@@ -543,13 +551,13 @@ h2 {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0;
-  padding: 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 45px 0;
 }
 
 .projectRowA {
@@ -561,13 +569,10 @@ h2 {
   width: 45%;
   border-radius: 5px;
   overflow: hidden;
-  height: 435px;
   position: relative;
-  margin-bottom: 20px;
-  padding-right: 15px;
 }
 .project img {
-  height: 550px;
+  height: 460px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -575,11 +580,10 @@ h2 {
 
 .projectText {
   width: 40%;
-  padding: 10px 20px 30px 20px;
-  margin: 75px 50px 75px 25px;
+  padding: 15px 25px;
   position: relative;
   border-radius: 4px;
-  background: #CCDADA;
+  background: #E5E5E5;
 }
 .projectText h5 {
   text-align: center;
@@ -595,7 +599,7 @@ h2 {
   text-align: left;
   font-size: 14px;
 }
-.projectText p:nth-of-type(2) {
+.projectText a p {
   letter-spacing: 3px;
   background: #001F3D;
   padding: 10px 10px;
@@ -603,19 +607,21 @@ h2 {
   color: white;
   position: absolute;
   bottom: 10px;
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
+}
+.projectText a p:hover {
+  background: black;
 }
 
 .video {
-  width: 45%;
+  width: 43%;
   position: relative;
   display: inline-block;
   overflow: hidden;
-  height: 435px;
+  height: 415px;
   border-radius: 5px;
-  margin-bottom: 25px;
-  padding-top: 20px;
+  padding-top: 15px;
 }
 .video video {
   position: absolute;
@@ -632,7 +638,7 @@ h2 {
   position: relative;
   display: inline-block;
   overflow: hidden;
-  height: 435px;
+  height: 445px;
   border-radius: 5px;
   margin-bottom: 25px;
   padding-top: 20px;
@@ -653,6 +659,13 @@ h2 {
   margin: 0 auto;
   display: block;
 }
+.featured h5 {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid black;
+  font-weight: 700;
+}
 
 .featuredProject {
   display: -webkit-box;
@@ -663,6 +676,10 @@ h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.featuredProject:nth-of-type(2) {
+  border-top: 2px solid black;
+  padding-top: 80px;
 }
 
 .featuredProjectImage {
@@ -962,7 +979,7 @@ h5 a:hover {
 .contactImage {
   border: 10px solid white;
   width: 33%;
-  height: 500px;
+  height: 450px;
 }
 
 .contactForm {
@@ -977,6 +994,9 @@ h5 a:hover {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   width: 33%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .contactForm button {
   background: #001F3D;
@@ -997,17 +1017,17 @@ h5 a:hover {
 .contactInput {
   border: none;
   border-bottom: 2px solid #001F3D;
-  background: #CCDADA;
+  background: #E5E5E5;
   padding-bottom: 30px;
   font-family: "Montserrat", sans-serif;
   color: #001F3D;
   overflow: hidden;
-  width: 300px;
+  width: 90%;
   font-size: 20px;
 }
 
 .contactInfo {
-  width: 25%;
+  width: 27%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1022,6 +1042,7 @@ h5 a:hover {
 .contactInfo p {
   font-size: 16px;
   padding: 15px 0 25px 0;
+  text-align: center;
 }
 
 footer {
@@ -1152,6 +1173,16 @@ footer a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .projectRowB, .projectRowD {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 
   .video, .video1, .projectText, .project {
@@ -1160,6 +1191,11 @@ footer a {
 
   .projectText {
     margin: 20px 0;
+    padding: 40px 25px;
+  }
+
+  .projectText a p {
+    width: 90%;
   }
 
   .techStackName {
@@ -1196,6 +1232,62 @@ footer a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+@media (max-width: 900px) {
+  .landingTextAndImage {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .landingText, .portraitDiv, .iconsFlex {
+    width: 100%;
+  }
+
+  .landingText {
+    text-align: center;
+    padding-top: 25px;
+  }
+
+  .portraitDiv {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .iconsFlex {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+
+  .landingArrow {
+    position: absolute;
+    left: 47%;
+  }
+
+  .linkFlex {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 15%;
+  }
+
+  .navLink {
+    padding-bottom: 25px;
+  }
+
+  .logoImage {
+    position: relative;
+  }
+
+  .landingTextAndImage {
+    padding-top: 0;
   }
 }
 @media (max-width: 700px) {
@@ -1262,61 +1354,6 @@ footer a {
   .projectDisplay {
     padding-top: 20px;
   }
-
-  .landingTextAndImage {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
-
-  .landingText, .portraitDiv, .iconsFlex {
-    width: 100%;
-  }
-
-  .landingText {
-    text-align: center;
-    padding-top: 25px;
-  }
-
-  .portraitDiv {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-
-  .iconsFlex {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-
-  .landingArrow {
-    position: absolute;
-    left: 47%;
-  }
-
-  .linkFlex {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 15%;
-  }
-
-  .navLink {
-    padding-bottom: 25px;
-  }
-
-  .logoImage {
-    position: relative;
-  }
-
-  .landingTextAndImage {
-    padding-top: 0;
-  }
 }
 @media (max-width: 500px) {
   .portfolio {
@@ -1354,13 +1391,13 @@ footer a {
 }
 body, html {
   font-size: 125%;
-  background-color: #CCDADA;
+  background-color: #E5E5E5;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
 .wrapper {
-  width: 82.5%;
+  width: 80%;
   max-width: 1400px;
   margin: 0 auto;
 }

@@ -65,10 +65,10 @@ h2 {
 .projectRow {
     display: flex;
     justify-content: space-around;
+    align-items: stretch;
     flex-wrap: wrap;
     margin: 0;
-    padding: 0;
-    align-items: center;
+    padding: 45px 0;
 }
 .projectRowA {
     border-bottom: 4px solid black;
@@ -78,20 +78,17 @@ h2 {
     width: 45%;
     border-radius: 5px;
     overflow: hidden;
-    height: 435px;
     position: relative;
-    margin-bottom: 20px;
-    padding-right: 15px;
     img {
-        height: 550px;
+        height: 460px;
         width: 100%;
         object-fit: cover; 
     }
 }
 .projectText {
     width: 40%;
-    padding: 10px 20px 30px 20px;
-    margin: 75px 50px 75px 25px;
+    padding: 15px 25px;
+    // margin: 75px 50px 75px 25px;
     position: relative;
     border-radius: 4px;
     h5 {
@@ -108,7 +105,7 @@ h2 {
         text-align: left;
         font-size: 14px;
     }
-    p:nth-of-type(2) {
+    a p{
         letter-spacing: 3px;
         background: #001F3D;
         padding: 10px 10px;
@@ -116,21 +113,23 @@ h2 {
         color: white;
         position: absolute;
         bottom: 10px;
-        width: 90%;
+        width: 85%;
         margin: 0 auto;
+        &:hover {
+            background: black;
+        }
     }
-    background: #CCDADA;
+    background: #E5E5E5;
 
 }
 .video {
-    width: 45%;
+    width: 43%;
     position: relative;
     display: inline-block;
-    overflow:hidden;
-    height: 435px;
+    overflow: hidden;
+    height: 415px;
     border-radius: 5px;
-    margin-bottom: 25px;
-    padding-top: 20px;
+    padding-top: 15px;
    video {
         position: absolute;
         width: 100%;
@@ -145,7 +144,7 @@ h2 {
     position: relative;
     display: inline-block;
     overflow:hidden;
-    height: 435px;
+    height: 445px;
     border-radius: 5px;
     margin-bottom: 25px;
     padding-top: 20px;
@@ -165,12 +164,23 @@ h2 {
     // border-right: 145px solid black;
     // border-left: 145px solid black;
     display: block;
+    h5 {
+        text-align: center;
+        margin-bottom: 40px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid black;
+        font-weight: 700;
+    }
 }
 .featuredProject {
     display: flex;
     padding-bottom: 80px;
     padding-top: 10px;
     justify-content: space-between;
+    &:nth-of-type(2) {
+        border-top: 2px solid black;
+        padding-top: 80px;
+    }
 }
 .featuredProjectImage {
     width: 33%;
