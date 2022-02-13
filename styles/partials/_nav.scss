@@ -1,3 +1,135 @@
+$bp-small: 500px;
+$bp-arrow: 700px;
+$font-primary: 'Lusitana', sans-serif;
+$color: #98B296;
+$color-dark: darken($color, 10%);
+$color-lite: lighten($color, 10%);
+
+.hamburgerDiv {
+    position: fixed;
+    right: 30px;
+    opacity: 0;
+    top: 30px;
+}
+.toggler {
+    position: fixed;
+    right: 30px;
+    width: 65px; 
+    height: 65px;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+}
+.hamburger {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.hamburger > div {
+    position: relative;
+    width: 100%;
+    height: 8px;
+    background-color: #0F4A6F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+//top and bottom lines of hamburger menu
+.hamburger > div:before,
+.hamburger > div:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -20px;
+    width: 100%;
+    height: 8px;
+    background: inherit;
+}
+//move bottom line down
+.hamburger > div:after {
+    top: 20px;
+}
+//toggler animate 
+.toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+}
+
+//turn lines into x 
+.toggler:checked + .hamburger > div:before,
+.toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+}
+//rotate on hover when checked 
+.toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+}
+//change overlay styling 
+.overlayMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.overlayMenu > div {
+    background: #0F4A6F;
+    border-radius: 50%;
+    width: 200vw;
+    height: 200vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+
+.overlayMenu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.overlayMenu > div > div > ul > li {
+    color: white;
+    font-size: 2rem;
+    padding: 2rem;
+}
+.overlayMenu > div > div > ul > li > a {
+    transition: color 0.4s ease;
+    color: white;
+}
+//show menu on checked
+.toggler:checked ~ .overlayMenu {
+    visibility: visible;
+}
+.toggler:checked ~ .overlayMenu > div {
+    transform: scale(1);
+    transition-duration: 1.25s;
+}
+.toggler:checked ~ .overlayMenu > div > div {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+.toggler:checked ~ .hamburger > div {
+    background-color: white;
+}
+
 .navFlex {
     display: flex;
     flex-direction: row;
@@ -9,6 +141,7 @@
     display: flex;
     width: 30%;
     justify-content: space-between;
+    
 }
 .navLink {
     list-style-type: none;
@@ -34,4 +167,40 @@
     position: absolute;
     top: -45px;
     left: -25px;
+}
+
+@keyframes menu-animation {
+  0% {
+    opacity: 0;
+    transform: scale(0.04)
+               translateY(300%);
+  }
+  40% {
+    transform: scale(0.04)
+               translateY(0);
+    transition: ease-out;
+  }
+  40% {
+    transform: scale(0.04)
+               translateY(0);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(0.02)
+               translateY(0px);
+  }
+  61% {
+    transform: scale(0.04);
+  }
+  99.9% {
+    height: 0;
+    padding-bottom: 100%;
+    border-radius: 100%;
+  }
+  100% {
+    transform: scale(2);
+    height: 100%;
+    padding-bottom: 0;
+    border-radius: 0;
+  }
 }

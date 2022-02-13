@@ -13,6 +13,9 @@ h4 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: white;
+    padding: 50px 50px;
+    border-radius: 3%;
 }
 .aboutText {
     width: 50%;
@@ -30,7 +33,7 @@ h4 {
         object-fit: contain;
         object-position: center;
         border-radius: 50%;
-        border: 10px solid white;
+        border: 10px solid #001F3D;
     }
 }
 

@@ -4,6 +4,40 @@ portfolio.init = () => {
     portfolio.switchPortfolioToFeatured();
     portfolio.switchPortfolioToAll();
     portfolio.submitComment();
+    portfolio.changeMenuOnScroll();
+    portfolio.closeMenuOnClick();
+}
+const navLinks = document.querySelector(".linkFlex");
+const hamburger = document.querySelector(".hamburgerDiv");
+window.getComputedStyle(hamburger).opacity;
+// we want to create a tracker for user scroll
+// once user scrolls past an amount of pixels, the nav will disappear and the hamburger will appear 
+portfolio.changeMenuOnScroll = () => {
+    document.addEventListener('scroll', ()=>{
+        scrollPosition = window.pageYOffset;
+        if (scrollPosition >= 10){
+            navLinks.style.visibility = "hidden";
+            hamburger.style.opacity = "0.85";
+            hamburger.style.visibility = "visible"
+            } else {
+            navLinks.style.visibility = "visible";
+            hamburger.style.opacity = "0";
+            hamburger.style.visibility = "hidden";
+            document.getElementById("toggler").checked = false;
+            }
+    })
+}
+
+const overlayLinkArray = document.getElementsByClassName("overlayLink");
+const menuToggler = document.querySelector(".toggler");
+
+
+portfolio.closeMenuOnClick = () => {
+    for (let i = 0; i < overlayLinkArray.length; i++) {
+        overlayLinkArray[i].addEventListener('click', () => {
+            document.getElementById("toggler").checked = false;
+        })
+    } 
 }
 
 const portfolioBarFeatured = document.querySelector(".pBarB");
@@ -40,6 +74,17 @@ const form = document.querySelector(".contactForm");
 
 portfolio.submitComment = () => {
     formButton.addEventListener("click", () => {
+        const subject = document.querySelector(".contactSubject").value;
+        const email = document.querySelector(".contactEmail").value;
+        const message = document.querySelector(".contactMessage").value; 
+        const link = "mailto:antoniibrahimdeveloper@gmail.com"
+            + `?cc=${email}`
+            + "&subject=" + encodeURIComponent(subject)
+            + "&body=" + encodeURIComponent(message)
+            ;
+
+        window.location.href = link;
+
         const formChange = `
         <p class="submittedContact"> Thank you for contacting me! I'll be in touch shortly, be well!</p>
         `

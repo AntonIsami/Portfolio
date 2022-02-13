@@ -27,6 +27,23 @@
                 <li class="navLink"><a href="#about">About</a></li>
                 <li class="navLink"><a href="#contact">Contact</a></li>
             </ul>
+            <div class="hamburgerDiv">
+                <input type="checkbox" class="toggler" id="toggler">
+                <div class="hamburger"><div></div></div>
+                <div class="overlayMenu">
+                    <div>
+                        <div>
+                            <ul>
+                                <li class="navLink"><a class="overlayLink" href="#portfolio">Portfolio</a></li>
+                                <li class="navLink"><a class="overlayLink" href="#about">About</a></li>
+                                <li class="navLink "><a class="overlayLink" href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- <span class="iconify-inline hamburger" data-icon="charm:menu-hamburger" style="color: #98b296;" data-width="110"
+                    data-height="100"></span> -->
+            </div>
         </nav>
     </header>
     <main>
@@ -66,7 +83,7 @@
             
             </ul>
             
-        <a href="#portfolio" class="landingArrow"><span class="iconify" data-icon="bi:arrow-down" data-width="45" data-height="70"></span></a>
+        <a href="#portfolio" class="landingArrow"><span class="iconify landingArrow" data-icon="bi:arrow-down" data-width="55" data-height="90"></span></a>
         
         </section>
         <section class="portfolio" >
@@ -103,7 +120,7 @@
                             that information is stored on the "My Reading List" that changes live as the reader removes, adds, and sets
                             books as read. User also has a progress bar that shows them their reading progress through their collection.
                         </p>
-                        <a target="_blank" href="https://github.com/AntonIsami/project-four">
+                        <a target="_blank" href="https://github.com/AntonIsami/project-four" class="allBtn">
                             <p>2022 <span class="iconify-inline" data-icon="akar-icons:react-fill" style="color: white;" data-width="25"
                                 data-height="25"></span>
                     
@@ -269,7 +286,7 @@
                                 </p>
                                 <p>React Application</p>
                             </div>
-                            <p class="featureDescription">The very first React project I ever completed, using a nutritional API to track and log the user's daily diet and compile macronutrients. Firebase was an optional, task but I believed it was essential for the functionality. Users can save every item in their daily diet and view their complete nutritional log for the day. Items are split into simple foods and grocery products as these were the most detailed components of the API used.</p>
+                            <p class="featureDescription">The very first React project I ever completed, using a nutritional API to track and log the user's daily diet and compile macronutrients. Firebase was an optional task but I believed it was essential for the functionality. Users can save every item in their daily diet and view their complete nutritional log for the day. Items are split into simple foods and grocery products as these were the most detailed components of the API used.</p>
                         </div>
                     </div>
 
@@ -391,13 +408,18 @@
             <div class="contact wrapper">
                 <img src="contactImage.jpg" alt="ocean waves" class="contactImage">
                 <div class="contactForm">
-                    <label for="name" class="sr-only">Full Name</label>
-                    <input id="name" type="text" placeholder="Full Name" class="contactInput">
+
+                    <label for="subject" class="sr-only">Subject</label>
+                    <input id="subject" type="text" placeholder="Subject" class="contactInput contactSubject">
+
                     <label for="email" class="sr-only">Email</label>
-                    <input id="email" type="email" placeholder="Email" class="contactInput">
+                    <input id="email" type="email" placeholder="Email" class="contactInput contactEmail">
+
                     <label for="message" class="sr-only">Message</label>
-                    <input id="message" type="text" placeholder="Message" class="contactInput">
+                    <textarea id="message" type="text" placeholder="Message" class="contactInput contactMessage"></textarea>
+
                     <button class="contactButton">CONTACT</button>
+
                 </div>
                 <div class="contactInfo">
                         <p>Thank you so much for dropping by!<br>Hope we can have a chat over coffee or tea sometime and discuss your future projects!</p>
@@ -429,6 +451,7 @@
             </div>
         </div>
     </footer>
+    
     <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
     <script src="script.js"></script>
 </body>

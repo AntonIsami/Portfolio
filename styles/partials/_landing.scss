@@ -14,7 +14,7 @@
     }
     p {
         padding-bottom: 40px;
-        // text-transform: capitalize;
+        font-size: 20px;
     }
     p:nth-of-type(2){
         font-size: 18px;
@@ -29,8 +29,8 @@
 .portraitImage {
     width: 400px;
     border-radius: 50%;
-    border: 6px solid white;
-    box-shadow: 10px 10px 20px 5px;
+    border: 7px solid #001F3D;
+    box-shadow: 7px 25px 25px 7px;
 }
 .iconsFlex {
     display: flex;
@@ -54,6 +54,7 @@
     text-decoration: none;
     color: black;
     &:hover{
-            color: #F8EDEB;
+        color: lightblue;
+        transform: translateY(30px);
     }
 }
