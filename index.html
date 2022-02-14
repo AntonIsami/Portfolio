@@ -17,7 +17,7 @@
     <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
-    <header role="header" id="top">
+    <header role="banner" id="top" aria-label="header">
         <nav role="navigation" class="navFlex wrapper">
             <div class="logoDiv">
                 <img src="logo.jpg" class="logoImage" alt="logo image"/>
@@ -28,6 +28,7 @@
                 <li class="navLink"><a href="#contact">Contact</a></li>
             </ul>
             <div class="hamburgerDiv">
+                <label for="toggler" class="sr-only">menu overlay toggle</label>
                 <input type="checkbox" class="toggler" id="toggler">
                 <div class="hamburger"><div></div></div>
                 <div class="overlayMenu">
@@ -64,26 +65,26 @@
             <ul class="iconsFlex">
                 <li class="landingLi">
                     <div>
-                        <a href="mailto:antoniibrahimdeveloper@gmail.com?subject=Hi Antoni!"><span class="iconify-inline landingIcon" data-icon="fontisto:at" style="color: white;" data-width="38" data-height="34"></span></a>
+                        <a href="mailto:antoniibrahimdeveloper@gmail.com?subject=Hi Antoni!"><span class="iconify-inline landingIcon" data-icon="fontisto:at" style="color: white;" data-width="38" data-height="34">email link</span></a>
                     </div>
                 </li>
 
                 <li class="landingLi">
                     <div>
                         <a href="https://www.github.com/antonisami" target="_blank"><span class="iconify-inline landingIcon" data-icon="akar-icons:github-fill" style="color: white;" data-width="38"
-                            data-height="34"></span></a>
+                            data-height="34">github link</span></a>
                     </div>
                 </li>
 
                 <li class="landingLi">
                     <div>
-                        <a href="https://www.linkedin.com/in/antoniib/" target="_blank"><span class="iconify-inline landingIcon" data-icon="entypo-social:linkedin-with-circle" style="color: white;" data-width="38" data-height="34"></span></a>
+                        <a href="https://www.linkedin.com/in/antoniib/" target="_blank"><span class="iconify-inline landingIcon" data-icon="entypo-social:linkedin-with-circle" style="color: white;" data-width="38" data-height="34">linkedin link</span></a>
                     </div>
                 </li>
             
             </ul>
             
-        <a href="#portfolio" class="landingArrow"><span class="iconify landingArrow" data-icon="bi:arrow-down" data-width="55" data-height="90"></span></a>
+        <a href="#portfolio" class="landingArrow"><span class="iconify landingArrow" data-icon="bi:arrow-down" data-width="55" data-height="90">To portfolio</span></a>
         
         </section>
         <section class="portfolio" >
@@ -222,7 +223,7 @@
             </div>
             <div class="featuredDiv">
                 <div class="featured">
-                    <h5 class="wrapper">Featured Works</h5>
+                    <p class="wrapper featuredHeading">Featured Works</p>
 
                     <div class="featuredProject wrapper">
                         <div class="featuredProjectImage">
@@ -239,7 +240,7 @@
                                 <p>
                                     
                                     <a href="https://github.com/AntonIsami/project-four" target="_blank"><span class="iconify-inline landingIcon"
-                                            data-icon="akar-icons:github-fill" style="color: white;" data-width="25" data-height="25"></span></a>
+                                            data-icon="akar-icons:github-fill" style="color: white;" data-width="25" data-height="25">Github link</span></a>
                                     
                                 </p>
                                 <p>
@@ -273,7 +274,7 @@
                                 <p>
                                 
                                     <a href="https://github.com/AntonIsami/antoni-ibrahim-project-three" target="_blank"><span class="iconify-inline landingIcon"
-                                            data-icon="akar-icons:github-fill" style="color: white;" data-width="25" data-height="25"></span></a>
+                                            data-icon="akar-icons:github-fill" style="color: white;" data-width="25" data-height="25">Github link</span></a>
                                 
                                 </p>
                                 <p>
