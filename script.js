@@ -72,15 +72,24 @@ portfolio.switchPortfolioToAll = () => {
 const formButton = document.querySelector(".contactButton");
 const form = document.querySelector(".contactForm");
 
+portfolio.safeInput = (input) => {
+        return String(input)
+            .replace(/&/g, '&amp;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+}
+
 portfolio.submitComment = () => {
     formButton.addEventListener("click", () => {
         const subject = document.querySelector(".contactSubject").value;
         const email = document.querySelector(".contactEmail").value;
         const message = document.querySelector(".contactMessage").value; 
         const link = "mailto:antoniibrahimdeveloper@gmail.com"
-            + `?cc=${email}`
-            + "&subject=" + encodeURIComponent(subject)
-            + "&body=" + encodeURIComponent(message)
+            + `?cc=${portfolio.safeInput(email)}`
+            + "&subject=" + encodeURIComponent(portfolio.safeInput(subject))
+            + "&body=" + encodeURIComponent(portfolio.safeInput(message))
             ;
 
         window.location.href = link;
