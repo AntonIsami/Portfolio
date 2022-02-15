@@ -2,11 +2,12 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 40px;
+    
 }
 .contactImage {
     border: 10px solid #001F3D;
     width: 33%;
-    height: 450px;
+    padding-top: 50px;
 }
 .contactForm {
     display: flex;
@@ -43,6 +44,7 @@
     overflow: hidden;
     width: 90%;
     font-size: 20px;
+    margin: 30px 0;
 }
 .contactInfo {
     width: 27%;
@@ -51,7 +53,8 @@
     justify-content: center;
     p {
         font-size: 16px;
-        padding: 15px 0 25px 0;
+        padding: 35px 0 35px 0;
         text-align: center;
+        
     }
 }
