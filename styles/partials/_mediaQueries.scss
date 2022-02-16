@@ -89,8 +89,8 @@
         justify-content: space-around;
     }
     .landingArrow {
-        position: absolute;
-        left: 47%;
+        display: flex;
+        justify-content: center;
     }
     .linkFlex {
         align-items: center;
@@ -109,6 +109,9 @@
     .navLink ::before {
         bottom: 20px;
         height: 60%;
+    }
+    .tech, .techRow {
+        width: 33%
     }
 }
 
@@ -157,6 +160,12 @@
     .projectDisplay {
         padding-top: 20px;
     }
+    .pBarP {
+        width: 50%;
+    }
+    .projectText a p {
+        width: 85%;
+    }
 }   
 @media (max-width: 500px) {
     .portfolio {
@@ -178,9 +187,6 @@
     }
     .recentPostsDiv {
         margin-left: 5px;
-    }
-    .tech, .techRow {
-        width: 33%
     }
     .aboutPicture img {
         height: 50vh;

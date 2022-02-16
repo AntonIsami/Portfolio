@@ -1181,6 +1181,9 @@ h4 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .tech {
@@ -1612,8 +1615,12 @@ footer a {
   }
 
   .landingArrow {
-    position: absolute;
-    left: 47%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .linkFlex {
@@ -1642,6 +1649,10 @@ footer a {
   .navLink ::before {
     bottom: 20px;
     height: 60%;
+  }
+
+  .tech, .techRow {
+    width: 33%;
   }
 }
 @media (max-width: 700px) {
@@ -1708,6 +1719,14 @@ footer a {
   .projectDisplay {
     padding-top: 20px;
   }
+
+  .pBarP {
+    width: 50%;
+  }
+
+  .projectText a p {
+    width: 85%;
+  }
 }
 @media (max-width: 500px) {
   .portfolio {
@@ -1737,10 +1756,6 @@ footer a {
 
   .recentPostsDiv {
     margin-left: 5px;
-  }
-
-  .tech, .techRow {
-    width: 33%;
   }
 
   .aboutPicture img {
