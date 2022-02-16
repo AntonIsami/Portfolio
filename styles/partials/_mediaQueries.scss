@@ -106,7 +106,10 @@
     .landingTextAndImage {
         padding-top: 0;
     }
-
+    .navLink ::before {
+        bottom: 20px;
+        height: 60%;
+    }
 }
 
 @media (max-width: 700px) {

@@ -290,7 +290,7 @@ p {
 .navLink {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 17px;
   line-height: 24px;
   text-align: Left;
   vertical-align: Top;
@@ -468,14 +468,35 @@ p {
 
 .overlayMenu > div > div > ul > li {
   color: white;
-  font-size: 2rem;
-  padding: 2rem;
+  font-size: 1.25rem;
+  padding: 1.5rem;
+  list-style-type: none;
 }
 
 .overlayMenu > div > div > ul > li > a {
   -webkit-transition: color 0.4s ease;
   transition: color 0.4s ease;
   color: white;
+  text-decoration: none;
+  padding: 7px 5px;
+  margin: 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  line-height: 1.1px;
+  font-family: "Montserrat", sans-serif;
+}
+.overlayMenu > div > div > ul > li > a :hover {
+  color: black;
+  border-bottom: 1px solid white;
+}
+
+.overlayLink:hover {
+  color: black;
+  border-bottom: 1px solid white;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 .toggler:checked ~ .overlayMenu {
@@ -520,7 +541,6 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 30%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -528,16 +548,64 @@ p {
 
 .navLink {
   list-style-type: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative;
+}
+.navLink ::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  -webkit-transform: scale(0.1, 1);
+          transform: scale(0.1, 1);
+  z-index: 1;
+  background: rgba(229, 229, 229, 0.1);
+}
+.navLink :hover ~ a {
+  letter-spacing: 2px;
+}
+.navLink :hover::before {
+  opacity: 1;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+.navLink ::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.navLink :hover::after {
+  opacity: 0;
+  -webkit-transform: scale(0.1, 1);
+          transform: scale(0.1, 1);
 }
 .navLink a {
   text-decoration: none;
-  color: black;
-  padding: 10px 20px;
+  color: #001F3D;
+  padding: 7px 5px;
+  margin: 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  line-height: 1.1px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .navLink a:hover {
-  border: 2px solid #c5e6dc;
-  background: #c7e6e0;
-  border-radius: 5px;
+  background: rgba(200, 210, 220, 0.8);
   -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
@@ -656,6 +724,7 @@ p {
 .landingText p {
   padding-bottom: 40px;
   font-size: 20px;
+  font-family: "Karla", sans-serif;
 }
 .landingText p:nth-of-type(2) {
   font-size: 18px;
@@ -929,6 +998,9 @@ h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .featuredProject:nth-of-type(2) {
   border-top: 2px solid black;
@@ -1074,7 +1146,7 @@ h4 {
           justify-content: space-between;
   background: black;
   padding: 50px 50px;
-  border-radius: 6%;
+  border-radius: 1%;
 }
 
 .aboutText {
@@ -1085,6 +1157,7 @@ h4 {
   padding: 25px 0;
   font-size: 18px;
   color: white;
+  font-family: "Karla", sans-serif;
 }
 
 .aboutPicture {
@@ -1097,7 +1170,7 @@ h4 {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  border-radius: 15%;
+  border-radius: 5%;
   -webkit-box-shadow: 7px 15px 40px 7px;
           box-shadow: 7px 15px 40px 7px;
 }
@@ -1314,6 +1387,7 @@ h5 a:hover {
   font-size: 16px;
   padding: 35px 0 35px 0;
   text-align: center;
+  font-family: "Karla", sans-serif;
 }
 .contactInfo p:first-of-type {
   font-size: 20px;
@@ -1563,6 +1637,11 @@ footer a {
 
   .landingTextAndImage {
     padding-top: 0;
+  }
+
+  .navLink ::before {
+    bottom: 20px;
+    height: 60%;
   }
 }
 @media (max-width: 700px) {
