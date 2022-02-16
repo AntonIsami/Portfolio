@@ -1,7 +1,10 @@
+.contactSection {
+    margin-top: 125px;
+}
 .contact {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 40px;
+    padding: 40px 0 150px 0;
     
 }
 .contactImage {
@@ -56,5 +59,9 @@
         padding: 35px 0 35px 0;
         text-align: center;
         
+    }
+    p:first-of-type {
+        font-size: 20px;
+        padding-bottom: 0;
     }
 }

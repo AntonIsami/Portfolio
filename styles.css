@@ -548,10 +548,9 @@ p {
 }
 
 .logoImage {
-  width: 100%;
+  width: 85%;
   position: absolute;
   top: -45px;
-  left: -25px;
 }
 
 @-webkit-keyframes menu-animation {
@@ -645,7 +644,7 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 100px;
+  padding-top: 125px;
 }
 
 .landingText {
@@ -674,11 +673,10 @@ p {
 }
 
 .portraitImage {
-  width: 400px;
+  width: 75%;
   border-radius: 50%;
-  border: 7px solid #001F3D;
-  -webkit-box-shadow: 7px 25px 25px 7px;
-          box-shadow: 7px 25px 25px 7px;
+  -webkit-box-shadow: 7px 15px 40px 7px;
+          box-shadow: 7px 15px 40px 7px;
 }
 
 .iconsFlex {
@@ -1060,6 +1058,10 @@ h4 {
   padding-right: 10px;
 }
 
+.about {
+  margin-top: 125px;
+}
+
 .aboutDesc {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1070,18 +1072,19 @@ h4 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: white;
+  background: black;
   padding: 50px 50px;
-  border-radius: 3%;
+  border-radius: 6%;
 }
 
 .aboutText {
   width: 50%;
 }
 .aboutText p {
-  text-align: left;
+  text-align: center;
   padding: 25px 0;
   font-size: 18px;
+  color: white;
 }
 
 .aboutPicture {
@@ -1090,12 +1093,13 @@ h4 {
 .aboutPicture img {
   width: 100%;
   height: 60vh;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  border-radius: 50%;
-  border: 10px solid #001F3D;
+  border-radius: 15%;
+  -webkit-box-shadow: 7px 15px 40px 7px;
+          box-shadow: 7px 15px 40px 7px;
 }
 
 .techStack {
@@ -1143,17 +1147,18 @@ h4 {
   margin: 30px auto;
 }
 
-.techStack:nth-of-type(3) {
+.techStack:nth-of-type(2) {
   width: 80%;
   margin: 0 auto;
 }
-.techStack:nth-of-type(3) .tech {
+.techStack:nth-of-type(2) .tech {
   width: 50%;
 }
 
 .recentPostsDiv {
   background: #0F4A6F;
   padding-bottom: 70px;
+  margin: 125px 0;
 }
 
 .recentHeading {
@@ -1224,6 +1229,10 @@ h5 a:hover {
   color: #FEC89A;
 }
 
+.contactSection {
+  margin-top: 125px;
+}
+
 .contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1231,7 +1240,7 @@ h5 a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-bottom: 40px;
+  padding: 40px 0 150px 0;
 }
 
 .contactImage {
@@ -1306,6 +1315,10 @@ h5 a:hover {
   font-size: 16px;
   padding: 35px 0 35px 0;
   text-align: center;
+}
+.contactInfo p:first-of-type {
+  font-size: 20px;
+  padding-bottom: 0;
 }
 
 footer {
@@ -1674,4 +1687,14 @@ body, html {
   width: 80%;
   max-width: 1400px;
   margin: 0 auto;
+}
+
+main {
+  position: relative;
+  z-index: 0;
+}
+
+header {
+  position: relative;
+  z-index: 1;
 }
