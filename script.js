@@ -108,7 +108,6 @@ portfolio.projectsAnimation = () => {
     animatedElements.forEach((element)=>{
         const windowHeight = window.innerHeight;
         const elementTop = element.getBoundingClientRect().top;
-        console.log(windowHeight, elementTop);
         const elementVisible = 150;
         if (elementTop < windowHeight - elementVisible){
             element.classList.add("active");
