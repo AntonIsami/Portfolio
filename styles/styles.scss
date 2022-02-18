@@ -12,7 +12,9 @@
 
 body, html {
     font-size: 125%;
-    background-color: #E5E5E5;
+    background-image: url(backgroundPattern.png);
+    background-color: (255, 255, 255, 0.8);
+    background-blend-mode: lighten;
     scroll-behavior: smooth;
     overflow-x: hidden;
 }

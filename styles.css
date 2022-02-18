@@ -226,7 +226,7 @@ h1 {
   font-weight: 500;
   font-size: 40px;
   line-height: 50px;
-  color: #0F4A6F;
+  color: #F8EDEB;
 }
 
 h2 {
@@ -247,7 +247,7 @@ h3 {
   line-height: 38px;
   letter-spacing: 17px;
   text-align: center;
-  color: #001F3D;
+  color: #F8EDEB;
 }
 
 h4 {
@@ -256,7 +256,7 @@ h4 {
   font-size: 30px;
   line-height: 30px;
   letter-spacing: 4px;
-  color: #001F3D;
+  color: #F8EDEB;
 }
 
 h5, .featuredHeading {
@@ -275,7 +275,7 @@ h6 {
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
-  color: #0F4A6F;
+  color: #F8EDEB;
   text-align: center;
 }
 
@@ -284,7 +284,7 @@ p {
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-  color: #0F4A6F;
+  color: #F8EDEB;
 }
 
 .navLink {
@@ -371,7 +371,7 @@ p {
   position: relative;
   width: 100%;
   height: 8px;
-  background-color: #0F4A6F;
+  background-color: #F8EDEB;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -595,7 +595,7 @@ p {
 }
 .navLink a {
   text-decoration: none;
-  color: #001F3D;
+  color: #F8EDEB;
   padding: 7px 5px;
   margin: 0 10px;
   text-transform: uppercase;
@@ -778,7 +778,7 @@ p {
 
 .landingArrow {
   text-decoration: none;
-  color: black;
+  color: #F8EDEB;
 }
 .landingArrow:hover {
   color: lightblue;
@@ -1065,6 +1065,9 @@ h2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.fPTS p:nth-of-type(3) {
+  color: #001F3D;
+}
 
 .mask {
   opacity: 0;
@@ -1117,6 +1120,74 @@ h2 {
   margin: 0 auto;
 }
 
+.animated {
+  opacity: 0;
+  position: relative;
+}
+
+.active {
+  opacity: 1;
+}
+
+.active.fade-in-left {
+  -webkit-animation: fade-left 1s ease-in;
+          animation: fade-left 1s ease-in;
+}
+
+.active.fade-in-right {
+  -webkit-animation: fade-right 1s ease-in;
+          animation: fade-right 1s ease-in;
+}
+
+@-webkit-keyframes fade-left {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-left {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-right {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-right {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 h3 {
   border: 10px solid #001F3D;
   padding: 25px 25px;
@@ -1281,6 +1352,9 @@ h4 {
   padding-bottom: 10px;
   font-size: 18px;
 }
+.postText p:first-of-type {
+  color: #21243D;
+}
 .postText p:nth-of-type(2) {
   color: black;
 }
@@ -1342,12 +1416,14 @@ h5 a:hover {
 }
 .contactForm button {
   background: #001F3D;
-  color: white;
+  color: #F8EDEB;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 20px;
   padding: 10px 0;
   width: 75%;
+  border: none;
+  cursor: pointer;
 }
 .contactForm button:hover {
   background: lightblue;
@@ -1761,10 +1837,16 @@ footer a {
   .aboutPicture img {
     height: 50vh;
   }
+
+  .navFlex {
+    padding-top: 70px;
+  }
 }
 body, html {
   font-size: 125%;
-  background-color: #E5E5E5;
+  background-image: url(backgroundPattern.png);
+  background-color: 255, 255, 255, 0.8;
+  background-blend-mode: lighten;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }

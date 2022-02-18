@@ -6,6 +6,7 @@ portfolio.init = () => {
     portfolio.submitComment();
     portfolio.changeMenuOnScroll();
     portfolio.closeMenuOnClick();
+    portfolio.projectsAnimation();
 }
 const navLinks = document.querySelector(".linkFlex");
 const hamburger = document.querySelector(".hamburgerDiv");
@@ -100,5 +101,21 @@ portfolio.submitComment = () => {
         form.innerHTML = formChange;
 
     })
+}
+portfolio.projectsAnimation = () => {
+    const animatedElements = document.querySelectorAll(".animated");
+    console.log(animatedElements)
+    animatedElements.forEach((element)=>{
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+        console.log(windowHeight, elementTop);
+        const elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible){
+            element.classList.add("active");
+        } else {
+            element.classList.remove("active");
+        }
+    })
+    window.addEventListener("scroll", portfolio.projectsAnimation);
 }
 portfolio.init();
