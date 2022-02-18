@@ -1868,7 +1868,6 @@ body, html {
   background-color: 255, 255, 255, 0.8;
   background-blend-mode: lighten;
   scroll-behavior: smooth;
-  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }
 
