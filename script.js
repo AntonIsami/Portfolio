@@ -104,7 +104,6 @@ portfolio.submitComment = () => {
 }
 portfolio.projectsAnimation = () => {
     const animatedElements = document.querySelectorAll(".animated");
-    console.log(animatedElements)
     animatedElements.forEach((element)=>{
         const windowHeight = window.innerHeight;
         const elementTop = element.getBoundingClientRect().top;
