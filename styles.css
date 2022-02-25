@@ -798,6 +798,11 @@ p {
 .projectDisplay {
   background-color: #000000;
   display: none;
+  padding-bottom: 625px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
 }
 
 .portfolioHeading {
@@ -873,11 +878,16 @@ h2 {
       flex-wrap: wrap;
   margin: 0;
   padding: 45px 0;
+  position: absolute;
 }
 
 .projectRowA {
   border-bottom: 4px solid black;
   margin-bottom: 30px;
+}
+
+.projectRowB {
+  margin-left: 100px;
 }
 
 .project {
@@ -1120,11 +1130,6 @@ h2 {
   margin: 0 auto;
 }
 
-.animated {
-  opacity: 0;
-  position: relative;
-}
-
 .active {
   opacity: 1;
 }
@@ -1188,6 +1193,43 @@ h2 {
     opacity: 1;
   }
 }
+.leftArrow {
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  cursor: pointer;
+}
+
+.rightArrow {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  cursor: pointer;
+}
+
+.carouselIndicator {
+  background: none;
+  border-radius: 50%;
+  border: none;
+}
+
+.carouselNav {
+  position: absolute;
+  bottom: 5%;
+}
+
+.slides {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  left: 10%;
+}
+
 h3 {
   border: 10px solid #001F3D;
   padding: 25px 25px;

@@ -6,7 +6,7 @@ portfolio.init = () => {
     portfolio.submitComment();
     portfolio.changeMenuOnScroll();
     portfolio.closeMenuOnClick();
-    portfolio.projectsAnimation();
+    // portfolio.projectsAnimation();
 }
 const navLinks = document.querySelector(".linkFlex");
 const hamburger = document.querySelector(".hamburgerDiv");
@@ -64,9 +64,10 @@ portfolio.switchPortfolioToAll = () => {
         featured.style.display = "none";
         featuredP.style.color = "grey";
         portfolioBarFeatured.style.borderBottom = "2px solid grey";
-        all.style.display = "block";
+        all.style.display = "flex";
         allP.style.color = "white";
         portfolioBarAll.style.borderBottom = "2px solid white";
+        portfolio.projectCarousel();
     })
 }
 
@@ -102,18 +103,49 @@ portfolio.submitComment = () => {
 
     })
 }
-portfolio.projectsAnimation = () => {
-    const animatedElements = document.querySelectorAll(".animated");
-    animatedElements.forEach((element)=>{
-        const windowHeight = window.innerHeight;
-        const elementTop = element.getBoundingClientRect().top;
-        const elementVisible = 150;
-        if (elementTop < windowHeight - elementVisible){
-            element.classList.add("active");
-        } else {
-            element.classList.remove("active");
-        }
+// portfolio.projectsAnimation = () => {
+//     const animatedElements = document.querySelectorAll(".animated");
+//     animatedElements.forEach((element)=>{
+//         const windowHeight = window.innerHeight;
+//         const elementTop = element.getBoundingClientRect().top;
+//         const elementVisible = 150;
+//         if (elementTop < windowHeight - elementVisible){
+//             element.classList.add("active");
+//         } else {
+//             element.classList.remove("active");
+//         }
+//     })
+//     window.addEventListener("scroll", portfolio.projectsAnimation);
+// }
+const track = document.querySelector(".slides");
+const slides = Array.from(track.children);
+const nextButton = document.querySelector(".rightDiv");
+const prevButton = document.querySelector(".leftDiv");
+const carouselNav = document.querySelector(".carouselNav");
+const dots = Array.from(carouselNav.children);
+
+
+
+
+
+portfolio.projectCarousel = () => {
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    slides.forEach((slide, index) => {
+        slide.style.left = slideWidth * index + "px";
     })
-    window.addEventListener("scroll", portfolio.projectsAnimation);
+    nextButton.addEventListener('click', e => {
+        //grab current slide
+        console.log("hey");
+        const currentSlide = track.querySelector(".currentSlide");
+        const nextSlide = currentSlide.nextElementSibling;
+         //move to next slide
+        const amountToMove = nextSlide.style.left;
+        track.style.transform = `translateX(-` + amountToMove + `)`;
+        currentSlide.classList.remove("currentSlide");
+        nextSlide.classList.add("currentSlide");
+    })
+   
 }
+
+
 portfolio.init();
