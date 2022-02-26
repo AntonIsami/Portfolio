@@ -6,7 +6,7 @@ portfolio.init = () => {
     portfolio.submitComment();
     portfolio.changeMenuOnScroll();
     portfolio.closeMenuOnClick();
-    portfolio.projectsAnimation();
+    // portfolio.projectsAnimation();
 }
 const navLinks = document.querySelector(".linkFlex");
 const hamburger = document.querySelector(".hamburgerDiv");
@@ -64,9 +64,10 @@ portfolio.switchPortfolioToAll = () => {
         featured.style.display = "none";
         featuredP.style.color = "grey";
         portfolioBarFeatured.style.borderBottom = "2px solid grey";
-        all.style.display = "block";
+        all.style.display = "flex";
         allP.style.color = "white";
         portfolioBarAll.style.borderBottom = "2px solid white";
+        portfolio.projectCarousel();
     })
 }
 
@@ -102,18 +103,112 @@ portfolio.submitComment = () => {
 
     })
 }
-portfolio.projectsAnimation = () => {
-    const animatedElements = document.querySelectorAll(".animated");
-    animatedElements.forEach((element)=>{
-        const windowHeight = window.innerHeight;
-        const elementTop = element.getBoundingClientRect().top;
-        const elementVisible = 150;
-        if (elementTop < windowHeight - elementVisible){
-            element.classList.add("active");
-        } else {
-            element.classList.remove("active");
-        }
+// portfolio.projectsAnimation = () => {
+//     const animatedElements = document.querySelectorAll(".animated");
+//     animatedElements.forEach((element)=>{
+//         const windowHeight = window.innerHeight;
+//         const elementTop = element.getBoundingClientRect().top;
+//         const elementVisible = 150;
+//         if (elementTop < windowHeight - elementVisible){
+//             element.classList.add("active");
+//         } else {
+//             element.classList.remove("active");
+//         }
+//     })
+//     window.addEventListener("scroll", portfolio.projectsAnimation);
+// }
+const track = document.querySelector(".slides");
+const slides = Array.from(track.children);
+const nextButton = document.querySelector(".rightDiv");
+const prevButton = document.querySelector(".leftDiv");
+const carouselNav = document.querySelector(".carouselNav");
+const dots = Array.from(carouselNav.children);
+
+
+
+portfolio.projectCarousel = () => {
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    slides.forEach((slide, index) => {
+        slide.style.left = slideWidth * (index * 50) + "px";
     })
-    window.addEventListener("scroll", portfolio.projectsAnimation);
+    
+    
+    const moveToSlide = (track, currentSlide, targetSlide) => {
+        track.style.transform = `translateX(-` + targetSlide.style.left + `)`;
+        currentSlide.classList.remove("currentSlide");
+        targetSlide.classList.add("currentSlide");
+    }
+    //moving slides on the right button
+    nextButton.addEventListener('click', e => {
+        //grab current slide
+        const currentSlide = track.querySelector(".currentSlide");
+        const nextSlide = currentSlide.nextElementSibling;
+        
+        moveToSlide(track, currentSlide, nextSlide);
+        
+        // change dot on arrow next click
+        const currentDot = carouselNav.querySelector(".currentSlide");
+        const nextDot = currentDot.nextElementSibling;
+        updateDots(currentDot, nextDot);
+
+        const nextIndex = slides.findIndex(
+            slide => slide === nextSlide
+        )
+
+        hideArrows(slides, prevButton, nextButton, nextIndex);
+
+    })
+    prevButton.addEventListener('click', e => {
+        const currentSlide = track.querySelector(".currentSlide");
+        const prevSlide = currentSlide.previousElementSibling;
+       
+        moveToSlide(track, currentSlide, prevSlide);
+        
+        const currentDot = carouselNav.querySelector(".currentSlide");
+        const prevDot = currentDot.previousElementSibling;
+
+        updateDots(currentDot, prevDot);
+
+        const prevIndex = slides.findIndex(
+            slide => slide === prevSlide
+        )
+
+        hideArrows(slides, prevButton, nextButton, prevIndex);
+    })
+    carouselNav.addEventListener('click', e => {
+        // find which indicator was clicked on 
+        const targetDot = e.target.closest('button');
+        if (!targetDot) return;
+
+        const currentSlide = track.querySelector('.currentSlide');
+        const currentDot = carouselNav.querySelector(".currentSlide");
+        const targetIndex = dots.findIndex( dot => 
+            dot === targetDot
+        );
+        const targetSlide = slides[targetIndex];
+        moveToSlide(track, currentSlide, targetSlide);
+        updateDots(currentDot, targetDot);
+        hideArrows(slides, prevButton, nextButton, targetIndex);
+    })
+    const updateDots = (currentDot, targetDot) => {
+        currentDot.classList.remove("currentSlide");
+        targetDot.classList.add("currentSlide");
+
+    }
+    const hideArrows = (slides, prevButton,nextButton, targetIndex) => {
+        if (targetIndex === 0) {
+            prevButton.classList.add('isHidden');
+            nextButton.classList.remove('isHidden');
+        } else if (targetIndex === slides.length - 1) {
+            prevButton.classList.remove('isHidden');
+            nextButton.classList.add('isHidden');
+        } else {
+            prevButton.classList.remove('isHidden');
+            nextButton.classList.remove('isHidden');
+        }
+    }
+   
 }
+
+
 portfolio.init();
