@@ -73,6 +73,7 @@ h2 {
     margin: 0;
     padding: 45px 0;
     position: absolute;
+    transition: 850ms ease-in-out;
 }
 .projectRowA {
     border-bottom: 4px solid black;
@@ -338,13 +339,13 @@ h2 {
 .leftArrow {
     position: absolute;
     left: 5%;
-    top: 50%;
+    top: 40%;
     cursor: pointer;
 }
 .rightArrow {
     position: absolute;
     right: 5%;
-    top: 50%;
+    top: 40%;
     cursor: pointer;
 }
 .carouselIndicator {
@@ -355,6 +356,17 @@ h2 {
 .carouselNav {
     position: absolute;
     bottom: 5%;
+    button{
+        cursor: pointer;
+        & > svg {
+            color: grey;
+        }
+    }
+    button.currentSlide > svg{
+        
+        color: white;
+        
+    }
 }
 .slides {
     justify-content: center;
@@ -362,4 +374,7 @@ h2 {
     display: flex;
     width: 100%;
     left: 10%;
+}
+.isHidden {
+    display: none;
 }

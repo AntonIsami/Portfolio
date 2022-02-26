@@ -879,6 +879,8 @@ h2 {
   margin: 0;
   padding: 45px 0;
   position: absolute;
+  -webkit-transition: 850ms ease-in-out;
+  transition: 850ms ease-in-out;
 }
 
 .projectRowA {
@@ -1196,14 +1198,14 @@ h2 {
 .leftArrow {
   position: absolute;
   left: 5%;
-  top: 50%;
+  top: 40%;
   cursor: pointer;
 }
 
 .rightArrow {
   position: absolute;
   right: 5%;
-  top: 50%;
+  top: 40%;
   cursor: pointer;
 }
 
@@ -1217,6 +1219,15 @@ h2 {
   position: absolute;
   bottom: 5%;
 }
+.carouselNav button {
+  cursor: pointer;
+}
+.carouselNav button > svg {
+  color: grey;
+}
+.carouselNav button.currentSlide > svg {
+  color: white;
+}
 
 .slides {
   -webkit-box-pack: center;
@@ -1228,6 +1239,10 @@ h2 {
   display: flex;
   width: 100%;
   left: 10%;
+}
+
+.isHidden {
+  display: none;
 }
 
 h3 {
@@ -1910,6 +1925,7 @@ body, html {
   background-color: 255, 255, 255, 0.8;
   background-blend-mode: lighten;
   scroll-behavior: smooth;
+  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }
 
