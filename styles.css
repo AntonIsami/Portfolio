@@ -1260,7 +1260,7 @@ h4 {
 }
 
 .about {
-  margin-top: 125px;
+  padding: 125px 0;
 }
 
 .aboutDesc {
@@ -1670,6 +1670,18 @@ footer a {
     text-align: center;
   }
 
+  .projectDisplay {
+    padding-bottom: 1000px;
+  }
+
+  .leftArrow {
+    top: 91%;
+  }
+
+  .rightArrow {
+    top: 91%;
+  }
+
   .projectRow {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1876,6 +1888,22 @@ footer a {
 
   .projectText a p {
     width: 85%;
+  }
+
+  .projectDisplay {
+    padding-bottom: 1100px;
+  }
+
+  .leftArrow {
+    top: 94%;
+  }
+
+  .rightArrow {
+    top: 94%;
+  }
+
+  .carouselNav {
+    bottom: 2%;
   }
 }
 @media (max-width: 500px) {
