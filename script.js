@@ -6,11 +6,10 @@ portfolio.init = () => {
     portfolio.submitComment();
     portfolio.changeMenuOnScroll();
     portfolio.closeMenuOnClick();
-    // portfolio.projectsAnimation();
 }
 const navLinks = document.querySelector(".linkFlex");
 const hamburger = document.querySelector(".hamburgerDiv");
-window.getComputedStyle(hamburger).opacity;
+// window.getComputedStyle(hamburger).opacity;
 // we want to create a tracker for user scroll
 // once user scrolls past an amount of pixels, the nav will disappear and the hamburger will appear 
 portfolio.changeMenuOnScroll = () => {
@@ -103,20 +102,7 @@ portfolio.submitComment = () => {
 
     })
 }
-// portfolio.projectsAnimation = () => {
-//     const animatedElements = document.querySelectorAll(".animated");
-//     animatedElements.forEach((element)=>{
-//         const windowHeight = window.innerHeight;
-//         const elementTop = element.getBoundingClientRect().top;
-//         const elementVisible = 150;
-//         if (elementTop < windowHeight - elementVisible){
-//             element.classList.add("active");
-//         } else {
-//             element.classList.remove("active");
-//         }
-//     })
-//     window.addEventListener("scroll", portfolio.projectsAnimation);
-// }
+
 const track = document.querySelector(".slides");
 const slides = Array.from(track.children);
 const nextButton = document.querySelector(".rightDiv");
