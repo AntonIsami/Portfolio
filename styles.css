@@ -743,6 +743,7 @@ p {
 
 .portraitImage {
   width: 75%;
+  height: auto;
   border-radius: 50%;
   -webkit-box-shadow: 7px 15px 40px 7px;
           box-shadow: 7px 15px 40px 7px;
@@ -1453,6 +1454,7 @@ h5 a:hover {
 .contactImage {
   border: 10px solid #001F3D;
   width: 33%;
+  height: auto;
 }
 
 .contactForm {
